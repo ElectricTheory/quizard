@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_560335_quizard.QuizardUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>QuizardUtil</name>
+        <script><![CDATA[var QuizardUtil = Class.create();
+QuizardUtil.prototype = {
+
+    assessQuiz: function(assessId) {
+
+        var assessment = {
+            metric_type: {
+                id: "",
+                dv: ""
+            },
+            found: false
+        };
+
+        var assessGr = new GlideRecord('asmt_assessment_instance');
+
+        if (assessGr.get(assessId)) {
+            assessment.metric_type.id = assessGr.getValue('metric_type');
+            assessment.metric_type.dv = assessGr.getDisplayValue('metric_type');
+            assessment.found = true;
+        }
+
+        if (!assessment.found) {
+            return;
+        }
+
+
+        // get quiz format
+        var quizFormat = this.getQuizFormat(assessment.metric_type.id);
+
+        // get user's submission results
+        var submissionResults = this.getSubmission(assessId, quizFormat);
+
+        // compare user's submission to correct answers
+        var evaluated = this.evaluateSubmission(submissionResults, quizFormat);
+
+        return evaluated;
+    },
+
+    getQuizFormat: function(assessId) {
+
+        var format = {
+            category: {
+                ids: [],
+                categories: {}
+            },
+            question: {
+                ids: [],
+                questions: {
+
+                }
+            },
+            answers: []
+        };
+
+        var categoryQuery = "metric_type=" + assessId;
+
+        // get all categories for assessment
+        var catGr = new GlideRecord('asmt_metric_category');
+        catGr.addEncodedQuery(categoryQuery);
+        catGr.query();
+
+        while (catGr.next()) {
+
+            var catId = catGr.getUniqueValue();
+
+            var category = {};
+            category.name = catGr.getDisplayValue('name');
+            category.order = catGr.getValue('order');
+            category.weight = catGr.getValue('weight');
+
+            format.category.ids.push(catId);
+            format.category.categories[catId] = category;
+        }
+
+        // get all questions
+        var questionQuery = "categoryIN" + format.category.ids.join(',');
+
+        var questionGr = new GlideRecord('asmt_metric');
+        questionGr.addEncodedQuery(questionQuery);
+        questionGr.query();
+
+        while (questionGr.next()) {
+
+            var questionId = questionGr.getUniqueValue();
+
+            var question = {};
+            question.name = questionGr.getDisplayValue('name');
+            question.order = questionGr.getValue('order');
+            question.weight = questionGr.getValue('weight');
+            question.answers = [];
+            question.type_id = questionGr.getValue('datatype');
+
+            format.question.ids.push(questionId);
+            format.question.questions[questionId] = question;
+        }
+
+        //get all answers
+        var answerQuery = "metricIN" + format.question.ids.join(',');
+
+        var answerGr = new GlideRecord('asmt_metric_definition');
+        answerGr.addEncodedQuery(answerQuery);
+        answerGr.query();
+
+        while (answerGr.next()) {
+
+            var answer = {};
+            answer.id = answerGr.getUniqueValue();
+            answer.display = answerGr.getValue('display');
+            answer.value = answerGr.getValue('value');
+            answer.order = answerGr.getValue('order');
+            answer.is_correct = answerGr.getDisplayValue('x_560335_quizard_is_correct');
+
+            var sourceQuestion = answerGr.getValue('metric');
+
+            format.question.questions[sourceQuestion].answers.push(answer);
+            format.answers.push(answer);
+
+        }
+
+        return format;
+
+    },
+
+    getSubmission: function(assessId, format) {
+
+        var submission = {
+            question_responses: {
+
+            }
+        };
+
+        var submissionQuery = "instance=" + assessId;
+
+        // get user's answers
+        var userAnsGr = new GlideRecord('asmt_assessment_instance_question');
+        userAnsGr.addEncodedQuery(submissionQuery);
+        userAnsGr.query();
+
+        while (userAnsGr.next()) {
+
+            var question_id = userAnsGr.getValue('metric');
+            var userResponse = userAnsGr.getValue('value');
+
+            if (!submission.question_responses[question_id]) {
+
+                var submittedResponses = [];
+                submittedResponses.push(userResponse);
+                submission.question_responses[question_id] = submittedResponses;
+
+            } else {
+
+                submission.question_responses[question_id].push(userResponse);
+
+            }
+        }
+
+        return submission;
+    },
+
+    evaluateSubmission: function(submission, format) {
+
+        var results = [];
+
+        // loop through all questions on quiz and compare results
+        var allQuestions = format.question.questions;
+
+
+        for (questionId in allQuestions) {
+
+            var currentQuestion = allQuestions[questionId];
+
+            var evalQuestion = {
+                answer_state: "unanswered",
+				label: currentQuestion.name,
+				order: currentQuestion.order,
+				weight: currentQuestion.weight,
+				answers: currentQuestion.answers,
+				user_responses: submission.question_responses[questionId]
+            };
+
+            var qType = currentQuestion.type_id;
+
+
+
+            // scale = one answer
+            if (qType === "scale") {
+
+                var correctAnswer = currentQuestion.answers.find(function(answer) {
+                    return answer.is_correct === "true";
+                });
+
+                var correctVal = correctAnswer.value;
+                var userResponse = submission.question_responses[questionId][0];
+
+                if (correctVal === userResponse) {
+
+                    evalQuestion.answer_state = "true";
+
+                } else {
+
+                    evalQuestion.answer_state = "false";
+
+                }
+
+
+
+                // other options have potentially multiple answers
+            } else {
+
+            }
+
+
+			results.push(evalQuestion);
+        }
+
+		return results;
+    },
+
+    type: 'QuizardUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-08 20:30:53</sys_created_on>
+        <sys_id>543dde7453b512108dbe38f0a0490ee5</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_name>QuizardUtil</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_script_include_543dde7453b512108dbe38f0a0490ee5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-14 21:53:05</sys_updated_on>
+    </sys_script_include>
+</record_update>
