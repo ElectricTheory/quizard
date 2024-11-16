@@ -180,11 +180,11 @@ QuizardUtil.prototype = {
 
             var evalQuestion = {
                 answer_state: "unanswered",
-				label: currentQuestion.name,
-				order: currentQuestion.order,
-				weight: currentQuestion.weight,
-				answers: currentQuestion.answers,
-				user_responses: submission.question_responses[questionId]
+                label: currentQuestion.name,
+                order: currentQuestion.order,
+                weight: currentQuestion.weight,
+                answers: currentQuestion.answers,
+                user_responses: submission.question_responses[questionId]
             };
 
             var qType = currentQuestion.type_id;
@@ -203,11 +203,11 @@ QuizardUtil.prototype = {
 
                 if (correctVal === userResponse) {
 
-                    evalQuestion.answer_state = "true";
+                    evalQuestion.answer_state = "correct";
 
                 } else {
 
-                    evalQuestion.answer_state = "false";
+                    evalQuestion.answer_state = "incorrect";
 
                 }
 
@@ -216,13 +216,35 @@ QuizardUtil.prototype = {
                 // other options have potentially multiple answers
             } else {
 
+                var correctAnswers = currentQuestion.answers.filter(function(ans) {
+                    return ans.is_correct === "true";
+                });
+
+                var correctVals = correctAnswers.map(function(ans) {
+                    return ans.value;
+                }).sort();
+
+				evalQuestion.correct_vals = correctVals;
+
+                var correctStr = correctVals.join(',');
+
+                var userAnswers = evalQuestion.user_responses.sort();
+                var userAnswersStr = userAnswers.join(',');
+				
+
+                if (userAnswersStr === correctStr) {
+                    evalQuestion.answer_state = "correct";
+                } else {
+                    evalQuestion.answer_state = "incorrect";
+                }
+
             }
 
 
-			results.push(evalQuestion);
+            results.push(evalQuestion);
         }
 
-		return results;
+        return results;
     },
 
     type: 'QuizardUtil'
@@ -231,13 +253,13 @@ QuizardUtil.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-08 20:30:53</sys_created_on>
         <sys_id>543dde7453b512108dbe38f0a0490ee5</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>64</sys_mod_count>
         <sys_name>QuizardUtil</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_include_543dde7453b512108dbe38f0a0490ee5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-14 21:53:05</sys_updated_on>
+        <sys_updated_on>2024-11-16 21:59:31</sys_updated_on>
     </sys_script_include>
 </record_update>
