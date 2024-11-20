@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($rootScope) {
+    /* widget controller */
+    var c = this;
+
+    //trigger quiz view on Quizard Viewer widget
+    c.selectQuiz = function(quizId) {
+
+        var obj = {
+            action: "change_quiz_view",
+            quiz_id: quizId
+        };
+
+        $rootScope.$broadcast('setQuizView', obj);
+
+    };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.table_component {&#13;
+    overflow: auto;&#13;
+    width: 100%;&#13;
+}&#13;
+&#13;
+.table_component table {&#13;
+    border: 1px solid #dededf;&#13;
+    height: 100%;&#13;
+    width: 100%;&#13;
+    table-layout: auto;&#13;
+    border-collapse: collapse;&#13;
+    border-spacing: 1px;&#13;
+    text-align: left;&#13;
+}&#13;
+&#13;
+.table_component caption {&#13;
+    caption-side: top;&#13;
+    text-align: left;&#13;
+}&#13;
+&#13;
+.table_component th {&#13;
+    border: 1px solid #dededf;&#13;
+    background-color: #eceff1;&#13;
+    color: #000000;&#13;
+    padding: 5px;&#13;
+}&#13;
+&#13;
+.table_component td {&#13;
+    border: 1px solid #dededf;&#13;
+    background-color: #ffffff;&#13;
+    color: #000000;&#13;
+    padding: 5px;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>qzrd-gb</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Quizard Gradebook</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    var portalUtil = new QuizardPortalUtil();
+    var myQuizzes = portalUtil.getMyQuizzes() || [];
+
+    data.quizzes = myQuizzes;
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 22:06:47</sys_created_on>
+        <sys_id>a2e84ca353b112108dbe38f0a0490e36</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Quizard Gradebook</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sp_widget_a2e84ca353b112108dbe38f0a0490e36</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 17:33:26</sys_updated_on>
+        <template><![CDATA[<div class="quiz-list-table" role="region" tabindex="0">
+<table>
+    <caption>Quizzes</caption>
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Assessment</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="quiz in data.quizzes">
+        <td class="q-number"><button ng-click="c.selectQuiz(quiz.id)">{{::quiz.number}}</button></td>
+        <td>{{::quiz.type_dv}}</td>
+        <td>{{::quiz.number}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $rootScope) {
+    /* widget controller */
+    var c = this;
+    c.quizActive = c.data.quizActive;
+    c.quizData = null;
+
+    $rootScope.$on('setQuizView', function(event, obj) {
+
+        c.data.action = obj.action;
+        c.data.quiz_id = obj.quiz_id;
+        c.data.quizActive = true;
+        c.quizActive = true;
+
+        c.server.update().then(function(response) {
+            c.quizData = c.data.quizData;
+        });
+    });
+
+    $scope.styleAnswer = function(ans, userResponses) {
+
+        if (userResponses.indexOf(ans.value) !== -1) {
+
+            if (ans.is_correct === "true") {
+                return "user-ans-correct";
+            } else {
+                return "user-ans-incorrect";
+            }
+        }
+    };
+
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.qzrd-viewer {&#13;
+  border: solid black 1px;&#13;
+  width: 100%;&#13;
+  height: 100%;&#13;
+}&#13;
+&#13;
+.quiz-header-wrapper {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  width: 100%;&#13;
+  justify-content: space-between;&#13;
+}&#13;
+&#13;
+.answer-row {&#13;
+  display: flex;&#13;
+  width: 100%;&#13;
+  align-items: center;&#13;
+}&#13;
+&#13;
+.answer-display {&#13;
+  margin-bottom: 0;&#13;
+}&#13;
+&#13;
+.ans-icon {&#13;
+  margin-right: 2px;&#13;
+}&#13;
+&#13;
+.user-ans-correct {&#13;
+  border: solid green 1px;&#13;
+}&#13;
+&#13;
+.user-ans-incorrect {&#13;
+  border: solid red 1px;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>qzrd-viewer</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Quizard Viewer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.quizActive = false;
+
+    if (input && input.action == "change_quiz_view") {
+        
+		var quizUtil = new QuizardPortalUtil();
+		
+		var quizData = quizUtil.getQuizDataForViewer(input.quiz_id);
+		data.quizData = quizData;
+
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 22:10:24</sys_created_on>
+        <sys_id>acc9c0e353b112108dbe38f0a0490e3b</sys_id>
+        <sys_mod_count>122</sys_mod_count>
+        <sys_name>Quizard Viewer</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sp_widget_acc9c0e353b112108dbe38f0a0490e3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-20 21:39:44</sys_updated_on>
+        <template><![CDATA[<div class="qzrd-viewer">
+  <div ng-if="!c.quizActive">No Quiz....</div>
+  <div class="qzrd-viewer-quiz" ng-if="c.quizActive">
+    <span class="quiz-header-wrapper">
+      <h1 class="quiz-name">{{ c.quizData.metric_type.dv }}</h1>
+      <p class="quiz-score">{{ c.quizData.correct_count }} / {{ c.quizData.question_count }}</p>
+    </span>
+    <section class="quiz-answers">
+      
+      <div class="category-list">
+        <div class="q-cat" ng-repeat="catId in c.quizData.format.category.ids">
+          <p>{{ c.quizData.format.category.categories[catId].label }}</p>
+        <ol class="questions-list">
+          <li class="question" ng-repeat="questionId in c.quizData.format.category.categories[catId].question_ids">
+			
+            <div class="question-name">
+              {{ c.quizData.evaluation[questionId].label }}
+              <i class="fa fa-check" ng-if="c.quizData.evaluation[questionId].answer_state === 'correct'"></i>
+              <i class="fa fa-close" ng-if="c.quizData.evaluation[questionId].answer_state === 'incorrect'"></i>
+            </div>
+              <div ng-repeat="answer in c.quizData.evaluation[questionId].answers" 
+                   ng-class="styleAnswer(answer, c.quizData.evaluation[questionId].user_responses, c.quizData.evaluation[questionId].label)" class="answer-wrapper">
+                <span class="answer-row">
+                  <i class="ans-icon fa fa-check" ng-if="answer.is_correct === 'true'"></i>
+                  <i class="ans-icon fa fa-close" ng-if="answer.is_correct === 'false'"></i>
+                  <p class="answer-display">{{ answer.display }}</p>
+                </span>
+              </div>
+          </li>
+        </ol>
+     
+        </div>
+      </div>
+      
+      
+
+      
+      
+      
+    </section>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

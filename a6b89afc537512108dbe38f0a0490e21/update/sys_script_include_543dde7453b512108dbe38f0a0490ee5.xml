@@ -17,7 +17,11 @@ QuizardUtil.prototype = {
                 id: "",
                 dv: ""
             },
-            found: false
+			format: {},
+			question_count: null,
+			correct_count: null,
+            found: false,
+			evaluation: {}
         };
 
         var assessGr = new GlideRecord('asmt_assessment_instance');
@@ -35,6 +39,7 @@ QuizardUtil.prototype = {
 
         // get quiz format
         var quizFormat = this.getQuizFormat(assessment.metric_type.id);
+		assessment.format = quizFormat;
 
         // get user's submission results
         var submissionResults = this.getSubmission(assessId, quizFormat);
@@ -42,7 +47,19 @@ QuizardUtil.prototype = {
         // compare user's submission to correct answers
         var evaluated = this.evaluateSubmission(submissionResults, quizFormat);
 
-        return evaluated;
+		var evalList = Object.values(evaluated);
+
+        assessment.evaluation = evaluated;
+
+		assessment.question_count = evalList.length;
+		
+		var correctAnswers = evalList.filter(function(question) {
+			return question.answer_state === "correct";
+		});
+
+		assessment.correct_count = correctAnswers.length;
+
+        return assessment;
     },
 
     getQuizFormat: function(assessId) {
@@ -76,6 +93,7 @@ QuizardUtil.prototype = {
             category.name = catGr.getDisplayValue('name');
             category.order = catGr.getValue('order');
             category.weight = catGr.getValue('weight');
+			category.question_ids = [];
 
             format.category.ids.push(catId);
             format.category.categories[catId] = category;
@@ -91,6 +109,7 @@ QuizardUtil.prototype = {
         while (questionGr.next()) {
 
             var questionId = questionGr.getUniqueValue();
+			var categoryId = questionGr.getValue('category');
 
             var question = {};
             question.name = questionGr.getDisplayValue('name');
@@ -98,6 +117,9 @@ QuizardUtil.prototype = {
             question.weight = questionGr.getValue('weight');
             question.answers = [];
             question.type_id = questionGr.getValue('datatype');
+			question.category_id = categoryId;
+
+			format.category.categories[catId].question_ids.push(questionId);
 
             format.question.ids.push(questionId);
             format.question.questions[questionId] = question;
@@ -169,6 +191,7 @@ QuizardUtil.prototype = {
     evaluateSubmission: function(submission, format) {
 
         var results = [];
+		var resultsObj = {};
 
         // loop through all questions on quiz and compare results
         var allQuestions = format.question.questions;
@@ -240,11 +263,11 @@ QuizardUtil.prototype = {
 
             }
 
-
+            resultsObj[questionId] = evalQuestion;
             results.push(evalQuestion);
         }
 
-        return results;
+        return resultsObj;
     },
 
     type: 'QuizardUtil'
@@ -253,13 +276,13 @@ QuizardUtil.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-08 20:30:53</sys_created_on>
         <sys_id>543dde7453b512108dbe38f0a0490ee5</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>84</sys_mod_count>
         <sys_name>QuizardUtil</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_include_543dde7453b512108dbe38f0a0490ee5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-16 21:59:31</sys_updated_on>
+        <sys_updated_on>2024-11-19 19:34:31</sys_updated_on>
     </sys_script_include>
 </record_update>
