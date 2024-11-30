@@ -36,7 +36,6 @@ QuizardUtil.prototype = {
             return;
         }
 
-
         // get quiz format
         var quizFormat = this.getQuizFormat(assessment.metric_type.id);
 		assessment.format = quizFormat;
@@ -57,7 +56,16 @@ QuizardUtil.prototype = {
 			return question.answer_state === "correct";
 		});
 
+		var incorrectAnswers = evalList.filter(function(question) {
+			return question.answer_state === "incorrect";
+		});
+
+		var incorrectIds = incorrectAnswers.map(function(question){
+			return question.question_id;
+		});
+
 		assessment.correct_count = correctAnswers.length;
+		assessment.incorrect_ids = incorrectIds;
 
         return assessment;
     },
@@ -190,12 +198,10 @@ QuizardUtil.prototype = {
 
     evaluateSubmission: function(submission, format) {
 
-        var results = [];
 		var resultsObj = {};
 
         // loop through all questions on quiz and compare results
         var allQuestions = format.question.questions;
-
 
         for (questionId in allQuestions) {
 
@@ -207,12 +213,11 @@ QuizardUtil.prototype = {
                 order: currentQuestion.order,
                 weight: currentQuestion.weight,
                 answers: currentQuestion.answers,
-                user_responses: submission.question_responses[questionId]
+                user_responses: submission.question_responses[questionId],
+				question_id: questionId
             };
 
             var qType = currentQuestion.type_id;
-
-
 
             // scale = one answer
             if (qType === "scale") {
@@ -233,8 +238,6 @@ QuizardUtil.prototype = {
                     evalQuestion.answer_state = "incorrect";
 
                 }
-
-
 
                 // other options have potentially multiple answers
             } else {
@@ -264,7 +267,7 @@ QuizardUtil.prototype = {
             }
 
             resultsObj[questionId] = evalQuestion;
-            results.push(evalQuestion);
+
         }
 
         return resultsObj;
@@ -276,13 +279,13 @@ QuizardUtil.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-08 20:30:53</sys_created_on>
         <sys_id>543dde7453b512108dbe38f0a0490ee5</sys_id>
-        <sys_mod_count>84</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>QuizardUtil</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_include_543dde7453b512108dbe38f0a0490ee5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 19:34:31</sys_updated_on>
+        <sys_updated_on>2024-11-26 21:34:10</sys_updated_on>
     </sys_script_include>
 </record_update>

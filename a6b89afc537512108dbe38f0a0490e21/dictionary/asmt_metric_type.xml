@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="kagami_csindex_enabled=true,update_synch=true" db_object_id="70c405ba4090121087de8045c806ff30" extends="sys_metadata" label="Assessment Metric Type" max_length="40" name="asmt_metric_type" type="collection">
+        <element label="Origin Exam" max_length="32" name="x_560335_quizard_origin_exam" read_only="true" reference="asmt_metric_type" type="reference"/>
+        <index name="index">
+            <element name="x_560335_quizard_origin_exam"/>
+        </index>
+    </element>
+</database>

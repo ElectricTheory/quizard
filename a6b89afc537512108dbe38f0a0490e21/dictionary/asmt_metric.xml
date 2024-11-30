@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" db_object_id="54c4c1ba4090121087de8045c806ff1e" extends="sys_metadata" label="Assessment Metric" max_length="40" name="asmt_metric" type="collection">
+        <element attributes="array=denormalized,no_sort=true,slushbucket_ref_no_expand=true" label="Tags" max_length="500" name="x_560335_quizard_tags" type="glide_list"/>
+    </element>
+</database>

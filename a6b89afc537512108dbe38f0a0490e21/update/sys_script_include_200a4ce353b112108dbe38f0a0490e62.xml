@@ -9,45 +9,248 @@
         <name>QuizardPortalUtil</name>
         <script><![CDATA[var QuizardPortalUtil = Class.create();
 QuizardPortalUtil.prototype = {
-    initialize: function() {
+    initialize: function() {},
+
+    getGradebookData: function() {
+
+        var quizTypeProp = gs.getProperty('x_560335_quizard.quiz_ids');
+
+        if (!quizTypeProp) {
+
+            gs.addErrorMessage('Error! Must configure at least one assessment ID in x_560335_quizard.quiz_id sys property');
+
+            return;
+        }
+
+        var gradeBook = {};
+
+        var quizzes = [];
+        var assessmentIds = [];
+
+        //user is me
+        var assessmentQuery = "userDYNAMIC90d1921e5f510100a9ad2572f2b477fe^";
+
+        var quizIds = quizTypeProp.split(',');
+
+        if (quizIds.length > 0) {
+
+            assessmentQuery = assessmentQuery + "metric_typeIN" + quizIds.join(',');
+
+        } else {
+
+            assessmentQuery = assessmentQuery + "metric_type=" + quizIds[0];
+
+        }
+
+        var assessGr = new GlideRecord('asmt_assessment_instance');
+        assessGr.addEncodedQuery(assessmentQuery);
+        assessGr.orderByDesc('sys_updated_on');
+        assessGr.query();
+
+        while (assessGr.next()) {
+
+            var assessmentId = assessGr.getUniqueValue();
+            assessmentIds.push(assessmentId);
+
+            var assessment = {
+                id: assessmentId,
+                number: assessGr.getValue('number'),
+                type_dv: assessGr.getDisplayValue('metric_type'),
+                type_id: assessGr.getValue('metric_type'),
+                state: assessGr.getValue('state')
+            };
+
+            var content = this.getAssessmentContext(assessment);
+
+            assessment.content = content;
+
+            quizzes.push(assessment);
+
+        }
+
+        gradeBook.quizzes = quizzes;
+        gradeBook.assessmentIds = assessmentIds;
+
+        return gradeBook;
     },
 
-	getMyQuizzes: function() {
+    // returns quiz data formatted for Quizard Viewer Widget
+    getQuizDataForViewer: function(quizId) {
 
-		var quizzes = [];
-		
-		var assessGr = new GlideRecord('asmt_assessment_instance');
-		assessGr.addEncodedQuery('userDYNAMIC90d1921e5f510100a9ad2572f2b477fe');
-		assessGr.orderByDesc('sys_updated_on')
-		assessGr.query();
+        var quizardUtil = new QuizardUtil();
+        var assessQuiz = quizardUtil.assessQuiz(quizId);
+        data.assessQuiz = assessQuiz;
 
-		while (assessGr.next()) {
+        return assessQuiz;
+    },
 
-			var assessment = {
-				id: assessGr.getUniqueValue(),
-				number: assessGr.getValue('number'),
-				type_dv: assessGr.getDisplayValue('metric_type'),
-				type_id: assessGr.getValue('metric_type'),
-				state: assessGr.getValue('state')
-			};
+    // returns assessment score for provided assessmentGR
+    getAssessmentContext: function(assessment) {
 
-			quizzes.push(assessment);
+        var quizardUtil = new QuizardUtil();
+        var content = {};
 
-		}
+        // get quiz format
+        var quizFormat = quizardUtil.getQuizFormat(assessment.type_id);
+        content.format = quizFormat;
 
-		return quizzes;
-	},
+        // get user's submission results
+        var submissionResults = quizardUtil.getSubmission(assessment.id, quizFormat);
 
-	// returns quiz data formatted for Quizard Viewer Widget
-	getQuizDataForViewer: function(quizId) {
+        // compare user's submission to correct answers
+        var evaluated = quizardUtil.evaluateSubmission(submissionResults, quizFormat);
 
-		var quizardUtil = new QuizardUtil();
-		
-		var assessQuiz = quizardUtil.assessQuiz(quizId);
-		data.assessQuiz = assessQuiz;
+        var evalList = Object.values(evaluated);
 
-		return assessQuiz;
-	},
+        content.evaluation = evaluated;
+        content.question_count = evalList.length;
+
+        var correctAnswers = evalList.filter(function(question) {
+            return question.answer_state === "correct";
+        });
+
+        content.correct_count = correctAnswers.length;
+        return content;
+    },
+
+    createNewQuiz: function(incorrectIds, existingQuizId) {
+
+        var newQuizId = "";
+        var categories = {};
+
+        var existingQuizGr = new GlideRecord('asmt_metric_type');
+
+        if (existingQuizGr.get(existingQuizId)) {
+
+            var newAssessmentGr = new GlideRecord('asmt_metric_type');
+
+            newAssessmentGr.initialize();
+            newAssessmentGr.condition = existingQuizGr.getValue('condition');
+            newAssessmentGr.table = existingQuizGr.getValue('table');
+            newAssessmentGr.scale_factor = 100;
+            newAssessmentGr.publish_state = "published";
+            newAssessmentGr.evaluation_method = existingQuizGr.getValue('evaluation_method');
+
+            var originExam = existingQuizGr.getValue('x_560335_quizard_origin_exam');
+
+            // parent has origin exam
+            if (originExam) {
+
+                newAssessmentGr.x_560335_quizard_origin_exam = originExam;
+                var nameInt = this.getRetakeName(originExam);
+
+                newAssessmentGr.name = existingQuizGr.getValue('name') + " V" + nameInt;
+
+
+            } else {
+
+                newAssessmentGr.x_560335_quizard_origin_exam = existingQuizGr.getUniqueValue();
+
+                newAssessmentGr.name = existingQuizGr.getValue('name') + " Retake";
+
+            }
+
+            newAssessmentGr.insert();
+            newQuizId = newAssessmentGr.getUniqueValue();
+
+        }
+
+
+        for (var i = 0; i < incorrectIds.length; i++) {
+
+            var questionGr = new GlideRecord('asmt_metric');
+
+            if (questionGr.get(incorrectIds[i])) {
+
+                var cat = questionGr.getValue('category');
+
+                // if category doesn't exist yet, create
+                if (!categories[cat]) {
+
+                    var newCatGr = new GlideRecord('asmt_metric_category');
+                    newCatGr.initialize();
+                    newCatGr.name = questionGr.getDisplayValue('category');
+                    newCatGr.metric_type = newQuizId;
+                    newCatGr.insert();
+
+                    var newUserCatGr = new GlideRecord('asmt_m2m_category_user');
+                    newUserCatGr.initialize();
+                    newUserCatGr.user = gs.getUserID();
+                    newUserCatGr.metric_category = newCatGr.getUniqueValue();
+                    newUserCatGr.insert();
+
+                    categories[cat] = newCatGr.getUniqueValue();
+                }
+            }
+
+            var newQuestionGr = new GlideRecord('asmt_metric');
+            newQuestionGr.initialize();
+
+            newQuestionGr.name = questionGr.getValue('name');
+            newQuestionGr.category = newCatGr.getUniqueValue();
+            newQuestionGr.method = questionGr.getValue('method');
+            newQuestionGr.order = questionGr.getValue('order');
+            newQuestionGr.weight = questionGr.getValue('weight');
+            newQuestionGr.question = questionGr.getValue('question');
+            newQuestionGr.details = questionGr.getValue('details');
+            newQuestionGr.randomize_answers = questionGr.getValue('randomize_answers');
+            newQuestionGr.datatype = questionGr.getValue('datatype');
+            newQuestionGr.correct_answer_choice = questionGr.getValue('correct_answer_choice');
+            newQuestionGr.scored = questionGr.getValue('scored');
+            newQuestionGr.x_560335_quizard_tags = questionGr.getValue('x_560335_quizard_tags');
+            newQuestionGr.insert();
+
+            this.copyAnswersToNewQuestion(questionGr.getUniqueValue(), newQuestionGr.getUniqueValue());
+
+        }
+
+
+        var linkStr = "asmt_metric_type.do?sys_id=" + newAssessmentGr.getUniqueValue();
+
+        var link = '<a href="' + linkStr + '">List Link</a>';
+        var message = gs.getMessage('New Test Created') + ' ' + link + ' ';
+        gs.addInfoMessage(message);
+
+    },
+
+    // get past iteration count of an exam to apply versioning count
+    getRetakeName: function(originId) {
+        var originAgg = new GlideAggregate('asmt_metric_type');
+        originAgg.addAggregate('COUNT');
+        originAgg.addEncodedQuery('x_560335_quizard_origin_exam=' + originId);
+        originAgg.query();
+
+        var count = originAgg.getAggregate('count');
+
+        gs.addInfoMessage('count: ' + count);
+
+        return count;
+    },
+
+    copyAnswersToNewQuestion: function(oldQuestionId, newQuestionId) {
+
+        var encQuery = "metric=" + oldQuestionId;
+
+        var ansGr = new GlideRecord('asmt_metric_definition');
+        ansGr.addEncodedQuery(encQuery);
+        ansGr.query();
+
+        while (ansGr.next()) {
+
+            var newAnsGr = new GlideRecord('asmt_metric_definition');
+            newAnsGr.initialize();
+
+            newAnsGr.display = ansGr.getValue('display');
+            newAnsGr.value = ansGr.getValue('value');
+            newAnsGr.normalization_input = ansGr.getValue('normalization_input');
+            newAnsGr.metric = newQuestionId;
+            newAnsGr.order = ansGr.getValue('order');
+            newAnsGr.x_560335_quizard_is_correct = ansGr.getValue('x_560335_quizard_is_correct');
+
+            newAnsGr.insert();
+        }
+
+    },
 
     type: 'QuizardPortalUtil'
 };]]></script>
@@ -55,13 +258,13 @@ QuizardPortalUtil.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-16 22:11:20</sys_created_on>
         <sys_id>200a4ce353b112108dbe38f0a0490e62</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>QuizardPortalUtil</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_include_200a4ce353b112108dbe38f0a0490e62</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 18:52:42</sys_updated_on>
+        <sys_updated_on>2024-11-30 22:26:33</sys_updated_on>
     </sys_script_include>
 </record_update>

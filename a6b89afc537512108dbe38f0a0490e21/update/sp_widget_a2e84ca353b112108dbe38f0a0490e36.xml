@@ -69,9 +69,9 @@
         <script><![CDATA[(function() {
 
     var portalUtil = new QuizardPortalUtil();
-    var myQuizzes = portalUtil.getMyQuizzes() || [];
+    var gradeBookData = portalUtil.getGradebookData() || {};
 
-    data.quizzes = myQuizzes;
+    data.quizzes = gradeBookData.quizzes;
 
 })();]]></script>
         <servicenow>false</servicenow>
@@ -79,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-16 22:06:47</sys_created_on>
         <sys_id>a2e84ca353b112108dbe38f0a0490e36</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Quizard Gradebook</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sp_widget_a2e84ca353b112108dbe38f0a0490e36</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 17:33:26</sys_updated_on>
+        <sys_updated_on>2024-11-22 20:52:03</sys_updated_on>
         <template><![CDATA[<div class="quiz-list-table" role="region" tabindex="0">
 <table>
     <caption>Quizzes</caption>
@@ -101,7 +101,7 @@
       <tr ng-repeat="quiz in data.quizzes">
         <td class="q-number"><button ng-click="c.selectQuiz(quiz.id)">{{::quiz.number}}</button></td>
         <td>{{::quiz.type_dv}}</td>
-        <td>{{::quiz.number}}</td>
+        <td>{{::quiz.content.correct_count}} / {{::quiz.content.question_count}}</td>
       </tr>
     </tbody>
 </table>
