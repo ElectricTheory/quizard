@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Generate Quiz from Script</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var questions = [{
+    display: "Which phase of the Now Create Methodology includes go-live planning?",
+    options: ["Initiate", "Plan", "Execute", "Deliver", "Close"],
+    category: "Go-Live Planning",
+    correct: ["Deliver"],
+    tags: "knowledge check"
+},{
+    display: "Which ServiceNow feature can be used for communication?",
+    options: ["Targeted campaigns", "Service requests", "Assessments and surveys", "Incidents"],
+    category: "Go-Live Planning",
+    correct: ["Targeted campaigns"],
+    tags: "knowledge check"
+}];
+
+var categories = {};
+var catIds = [];
+var examId = "";
+
+var name = "new_name_here";
+var catName = "cat_name_here";
+
+
+var quizGr = new GlideRecord('asmt_metric_type');
+quizGr.initialize();
+
+quizGr.scale_factor = 100;
+quizGr.name = name;
+quizGr.publish_state = "published";
+quizGr.evaluation_method = "quiz";
+
+quizGr.insert();
+
+examId = quizGr.getUniqueValue();
+
+for (var i = 0; i < questions.length; i++) {
+
+    var current = questions[i];
+    var catData = {};
+
+	if (catIds.length === 0) {
+
+		gs.info('no cat ids')
+
+        catData = createCategory(current, examId, catIds, categories);
+        catIds = catData.catIds;
+        categories = catData.categories;
+
+        createQuestion(current, catData.newCatId);
+
+    } 
+	  /** 
+	
+	else {
+
+        var catVals = Object.values(categories);
+
+        // category does not already exist
+        if (catVals.indexOf(current.category) !== -1) {
+
+			gs.addInfoMessage('cat4 doesnt already exist')
+
+            catData = createCategory(current, examId, catIds, categories);
+            createQuestion(current, catData.newCatId);
+
+        } else {
+
+			gs.addInfoMessage('cat4 exists')
+
+            var catIdx = catVals.indexOf(current.category);
+            var catKeys = Object.keys(categories);
+
+            createQuestion(current, catKeys[catIdx]);
+
+        }
+		
+
+    }
+**/
+				gs.info('current53: ' + i)
+
+
+}
+	
+
+
+
+setQuizIdProperty(examId);
+
+function createCategory(current, examId, catIds, categories) {
+
+    var catData = {
+        catIds: [],
+        categories: "",
+        newCatId: ""
+    };
+
+    categories = catData.categories;
+
+    var newCatGr = new GlideRecord('asmt_metric_category');
+    newCatGr.name = current.category;
+    newCatGr.metric_type = examId;
+    newCatGr.insert();
+
+    var newCatId = newCatGr.getUniqueValue();
+    catIds.push(newCatId);
+    categories[newCatId] = current.category;
+
+    catData.catIds = catIds;
+    catData.categories = categories;
+    catData.newCatId = newCatId;
+
+    var m2mCatGr = new GlideRecord('asmt_m2m_category_user');
+    m2mCatGr.initialize();
+    m2mCatGr.metric_category = newCatId;
+    m2mCatGr.user = gs.getUserID();
+    m2mCatGr.insert();
+
+    return catData;
+}
+
+
+function createQuestion(quest, cat) {
+
+	
+
+    var questionGr = new GlideRecord('asmt_metric');
+    questionGr.insert();
+
+    questionGr.name = quest.display;
+    questionGr.question = quest.display;
+    questionGr.category = cat;
+    questionGr.method = "assessment";
+    questionGr.tags = quest.tags;
+
+    if (quest.correct.length > 1) {
+        questionGr.datatype = "multiplecheckbox";
+    } else {
+        questionGr.datatype = "scale";
+    }
+
+    questionGr.insert();
+
+
+    for (i = 0; i < quest.options.length; i++) {
+
+		gs.info('questOpt: ' + quest.options[i])
+ 
+        var ansGr = new GlideRecord('asmt_metric_definition');
+        ansGr.initialize();
+
+        ansGr.display = quest.options[i];
+        ansGr.value = i;
+        ansGr.metric = questionGr.getUniqueValue();
+        ansGr.randomize_answers = true;
+
+        if (quest.correct.indexOf(quest.options[i]) !== -1) {
+            ansGr.x_560335_quizard_is_correct = "true";
+        }
+
+        ansGr.insert();
+    }
+	
+}
+
+//set system property of active quiz ids
+function setQuizIdProperty(newExamId) {
+
+    var quizIdProp = "x_560335_quizard.quiz_ids";
+    var currentQuizIds = gs.getProperty(quizIdProp);
+    var updatedSysProp = "";
+
+    if (currentQuizIds) {
+        updatedSysProp = currentQuizIds + "," + newExamId;
+    } else {
+        updatedSysProp = newExamId;
+    }
+
+    var gr = new GlideRecord('sys_properties');
+    gr.addQuery('name', quizIdProp);
+    gr.query();
+
+    if (gr.next()) {
+        gr.value = updatedSysProp;
+        gr.update();
+    }
+
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 01:01:15</sys_created_on>
+        <sys_id>1517fc40535612108dbe38f0a0490ed3</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>Generate Quiz from Script</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_script_fix_1517fc40535612108dbe38f0a0490ed3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 19:51:22</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

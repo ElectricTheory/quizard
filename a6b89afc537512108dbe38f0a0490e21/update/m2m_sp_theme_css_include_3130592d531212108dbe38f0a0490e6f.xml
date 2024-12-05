@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_css_include">
+    <m2m_sp_theme_css_include action="INSERT_OR_UPDATE">
+        <order/>
+        <sp_css_include display_value="Buttons">0910952d531212108dbe38f0a0490e15</sp_css_include>
+        <sp_theme display_value="Quizard Theme">7cc80c6353b112108dbe38f0a0490e07</sp_theme>
+        <sys_class_name>m2m_sp_theme_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-05 18:41:27</sys_created_on>
+        <sys_id>3130592d531212108dbe38f0a0490e6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Buttons.Quizard Theme</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>m2m_sp_theme_css_include_3130592d531212108dbe38f0a0490e6f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-05 18:41:27</sys_updated_on>
+    </m2m_sp_theme_css_include>
+</record_update>

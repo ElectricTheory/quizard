@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>.btn-rounded-rect {&#13;
+  background-color: $link-color;&#13;
+  color: $brand-primary;&#13;
+  border: solid $btn-default-bg 1px;&#13;
+  border-radius: 4px; &#13;
+  border-style:none;&#13;
+  padding: 5px 7px;&#13;
+}</css>
+        <name>qzrd-buttons.ccs</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-05 18:41:24</sys_created_on>
+        <sys_id>4b20192d531212108dbe38f0a0490e7a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>qzrd-buttons.ccs</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sp_css_4b20192d531212108dbe38f0a0490e7a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-05 19:04:45</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_css>
+</record_update>

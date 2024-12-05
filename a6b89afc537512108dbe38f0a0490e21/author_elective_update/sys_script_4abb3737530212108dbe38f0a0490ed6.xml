@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>asmt_metric_type</collection>
+        <condition/>
+        <description/>
+        <execute_function>true</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto business rule for Assessments</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[function onAfter(current, previous) {
+ var AssessmentUtils = new global.AssessmentUtils(); 
+ if (AssessmentUtils.conditionCheck(current, 'sys_id=5c6d5a3453b512108dbe38f0a0490ed1^EQ')) { 
+     AssessmentUtils.checkRecord(current, '42bb3737530212108dbe38f0a0490ed4', true);
+}}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-30 20:41:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4abb3737530212108dbe38f0a0490ed6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto business rule for Assessments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_script_4abb3737530212108dbe38f0a0490ed6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-30 20:41:25</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=4abb3737530212108dbe38f0a0490ed6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>sys_script_4abb3737530212108dbe38f0a0490ed6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;asmt_metric_type&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;true&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Auto business rule for Assessments&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[function onAfter(current, previous) {
+ var AssessmentUtils = new global.AssessmentUtils(); 
+ if (AssessmentUtils.conditionCheck(current, 'sys_id=5c6d5a3453b512108dbe38f0a0490ed1^EQ')) { 
+     AssessmentUtils.checkRecord(current, '42bb3737530212108dbe38f0a0490ed4', true);
+}}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-30 20:41:25&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;4abb3737530212108dbe38f0a0490ed6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Auto business rule for Assessments&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Quizard" source="x_560335_quizard"&gt;a6b89afc537512108dbe38f0a0490e21&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Quizard"&gt;a6b89afc537512108dbe38f0a0490e21&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_4abb3737530212108dbe38f0a0490ed6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-30 20:41:25&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=4abb3737530212108dbe38f0a0490ed6"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-122838953</payload_hash>
+        <record_name>Auto business rule for Assessments</record_name>
+        <reverted_from/>
+        <source>474b6874534212108dbe38f0a0490ec9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-30 20:41:25</sys_created_on>
+        <sys_id>1abbff77530212108dbe38f0a0490ede</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1937ece8b4f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-30 20:41:25</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>5abbff773a021210568a02029dd370dd</update_guid>
+        <update_guid_history>5abbff773a021210568a02029dd370dd:-122838953</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 00:49:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>1a3e676b67a74a8082ba2c1f362ea840</sys_id>
+        <sys_metadata>4abb3737530212108dbe38f0a0490ed6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto business rule for Assessments</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent display_value="Assessment Metric Type">70c405ba4090121087de8045c806ff30</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>sys_script_4abb3737530212108dbe38f0a0490ed6</sys_update_name>
+        <sys_update_version display_value="sys_script_4abb3737530212108dbe38f0a0490ed6">1abbff77530212108dbe38f0a0490ede</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 00:49:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

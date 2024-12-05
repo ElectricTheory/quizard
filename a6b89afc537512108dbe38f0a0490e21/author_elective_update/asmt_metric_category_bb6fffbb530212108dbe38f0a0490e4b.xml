@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter/>
+        <metric_type display_value="">b76fffbb530212108dbe38f0a0490e28</metric_type>
+        <name>New Quizs</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-30 20:57:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb6fffbb530212108dbe38f0a0490e4b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>New Quizs</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_bb6fffbb530212108dbe38f0a0490e4b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 00:49:41</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=bb6fffbb530212108dbe38f0a0490e4b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_bb6fffbb530212108dbe38f0a0490e4b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter/><metric_type display_value="">b76fffbb530212108dbe38f0a0490e28</metric_type><name>New Quizs</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-30 20:57:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bb6fffbb530212108dbe38f0a0490e4b</sys_id><sys_mod_count>2</sys_mod_count><sys_name>New Quizs</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_bb6fffbb530212108dbe38f0a0490e4b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-01 00:49:41</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=bb6fffbb530212108dbe38f0a0490e4b"/></record_update>]]></payload>
+        <payload_hash>-844612849</payload_hash>
+        <record_name>New Quizs</record_name>
+        <reverted_from/>
+        <source>bf93bc0c531612108dbe38f0a0490ebb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 00:49:41</sys_created_on>
+        <sys_id>76843c8c531612108dbe38f0a0490efd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1937fb1d6490000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 00:49:41</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>3e843c8c81161210a008599a634dccfc</update_guid>
+        <update_guid_history>3e843c8c81161210a008599a634dccfc:-844612849,bb6fffbb420212109a1ac73a56f91750:-999064728,bf6fffbbd60212104aad52315f13ad4c:85042491</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="New Quizs">76847c8c531612108dbe38f0a0490e0e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 00:49:41</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>0168dc3e3fd84dd4a1788c72ba1448f9</sys_id>
+        <sys_metadata>bb6fffbb530212108dbe38f0a0490e4b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Quizs</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_bb6fffbb530212108dbe38f0a0490e4b</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_bb6fffbb530212108dbe38f0a0490e4b">76843c8c531612108dbe38f0a0490efd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 00:49:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

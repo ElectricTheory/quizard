@@ -18,7 +18,18 @@
     };
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>.table_component {&#13;
+        <css>&#13;
+.quiz-list-table {&#13;
+  width: 100%;&#13;
+}&#13;
+&#13;
+.quiz-table-row {&#13;
+  &amp;:hover {&#13;
+    color: $brand-primary;&#13;
+  }&#13;
+}&#13;
+&#13;
+.table_component {&#13;
     overflow: auto;&#13;
     width: 100%;&#13;
 }&#13;
@@ -79,17 +90,17 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-16 22:06:47</sys_created_on>
         <sys_id>a2e84ca353b112108dbe38f0a0490e36</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>Quizard Gradebook</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sp_widget_a2e84ca353b112108dbe38f0a0490e36</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-22 20:52:03</sys_updated_on>
-        <template><![CDATA[<div class="quiz-list-table" role="region" tabindex="0">
-<table>
-    <caption>Quizzes</caption>
+        <sys_updated_on>2024-12-03 17:44:13</sys_updated_on>
+        <template><![CDATA[<div class="quiz-list-table-wrapper" role="region" tabindex="0">
+<table class="quiz-list-table">
+    <caption class="sr-only">Quizzes</caption>
     <thead>
         <tr>
             <th>Number</th>
@@ -98,10 +109,12 @@
         </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="quiz in data.quizzes">
-        <td class="q-number"><button ng-click="c.selectQuiz(quiz.id)">{{::quiz.number}}</button></td>
+      <tr class="quiz-table-row" ng-repeat="quiz in data.quizzes" ng-click="c.selectQuiz(quiz.id)">
+   
+        <td class="q-number">{{::quiz.number}}</td>
         <td>{{::quiz.type_dv}}</td>
         <td>{{::quiz.content.correct_count}} / {{::quiz.content.question_count}}</td>
+ 
       </tr>
     </tbody>
 </table>
