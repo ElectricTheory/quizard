@@ -4,27 +4,14 @@
         <description/>
         <name>Generate Quiz from Script</name>
         <record_for_rollback>true</record_for_rollback>
-        <script><![CDATA[var questions = [{
-    display: "Which phase of the Now Create Methodology includes go-live planning?",
-    options: ["Initiate", "Plan", "Execute", "Deliver", "Close"],
-    category: "Go-Live Planning",
-    correct: ["Deliver"],
-    tags: "knowledge check"
-},{
-    display: "Which ServiceNow feature can be used for communication?",
-    options: ["Targeted campaigns", "Service requests", "Assessments and surveys", "Incidents"],
-    category: "Go-Live Planning",
-    correct: ["Targeted campaigns"],
-    tags: "knowledge check"
-}];
+        <script><![CDATA[var dump = new QuizardDump();
+var questions = dump.QUESTIONS;
 
 var categories = {};
 var catIds = [];
 var examId = "";
 
-var name = "new_name_here";
-var catName = "cat_name_here";
-
+var name = "AI Test";
 
 var quizGr = new GlideRecord('asmt_metric_type');
 quizGr.initialize();
@@ -38,39 +25,32 @@ quizGr.insert();
 
 examId = quizGr.getUniqueValue();
 
+
 for (var i = 0; i < questions.length; i++) {
 
     var current = questions[i];
     var catData = {};
 
-	if (catIds.length === 0) {
-
-		gs.info('no cat ids')
+    if (catIds.length === 0) {
 
         catData = createCategory(current, examId, catIds, categories);
+
         catIds = catData.catIds;
         categories = catData.categories;
 
         createQuestion(current, catData.newCatId);
 
-    } 
-	  /** 
-	
-	else {
+    } else {
 
         var catVals = Object.values(categories);
 
         // category does not already exist
-        if (catVals.indexOf(current.category) !== -1) {
-
-			gs.addInfoMessage('cat4 doesnt already exist')
+        if (catVals.indexOf(current.category) === -1) {
 
             catData = createCategory(current, examId, catIds, categories);
             createQuestion(current, catData.newCatId);
 
         } else {
-
-			gs.addInfoMessage('cat4 exists')
 
             var catIdx = catVals.indexOf(current.category);
             var catKeys = Object.keys(categories);
@@ -78,17 +58,10 @@ for (var i = 0; i < questions.length; i++) {
             createQuestion(current, catKeys[catIdx]);
 
         }
-		
 
     }
-**/
-				gs.info('current53: ' + i)
-
 
 }
-	
-
-
 
 setQuizIdProperty(examId);
 
@@ -96,13 +69,14 @@ function createCategory(current, examId, catIds, categories) {
 
     var catData = {
         catIds: [],
-        categories: "",
+        categories: {},
         newCatId: ""
     };
 
     categories = catData.categories;
 
     var newCatGr = new GlideRecord('asmt_metric_category');
+    newCatGr.initialize();
     newCatGr.name = current.category;
     newCatGr.metric_type = examId;
     newCatGr.insert();
@@ -110,6 +84,8 @@ function createCategory(current, examId, catIds, categories) {
     var newCatId = newCatGr.getUniqueValue();
     catIds.push(newCatId);
     categories[newCatId] = current.category;
+
+    gs.info('catzId: ' + JSON.stringify(categories));
 
     catData.catIds = catIds;
     catData.categories = categories;
@@ -124,10 +100,8 @@ function createCategory(current, examId, catIds, categories) {
     return catData;
 }
 
-
+// generate metric record for question
 function createQuestion(quest, cat) {
-
-	
 
     var questionGr = new GlideRecord('asmt_metric');
     questionGr.insert();
@@ -136,7 +110,7 @@ function createQuestion(quest, cat) {
     questionGr.question = quest.display;
     questionGr.category = cat;
     questionGr.method = "assessment";
-    questionGr.tags = quest.tags;
+    questionGr.x_560335_quizard_tags = quest.tags;
 
     if (quest.correct.length > 1) {
         questionGr.datatype = "multiplecheckbox";
@@ -146,26 +120,30 @@ function createQuestion(quest, cat) {
 
     questionGr.insert();
 
+    createQuestionOptions(quest.options, questionGr.getUniqueValue(), quest.correct);
+}
 
-    for (i = 0; i < quest.options.length; i++) {
+// generate metric definitions for question options records
+function createQuestionOptions(opts, questionId, correctAns) {
 
-		gs.info('questOpt: ' + quest.options[i])
- 
+    for (var i = 0; i < opts.length; i++) {
+		
         var ansGr = new GlideRecord('asmt_metric_definition');
         ansGr.initialize();
 
-        ansGr.display = quest.options[i];
+        ansGr.display = opts[i];
         ansGr.value = i;
-        ansGr.metric = questionGr.getUniqueValue();
+        ansGr.metric = questionId;
         ansGr.randomize_answers = true;
 
-        if (quest.correct.indexOf(quest.options[i]) !== -1) {
+		// mark if option is a correct answer
+        if (correctAns.indexOf(opts[i]) !== -1) {
             ansGr.x_560335_quizard_is_correct = "true";
         }
 
         ansGr.insert();
+
     }
-	
 }
 
 //set system property of active quiz ids
@@ -190,19 +168,20 @@ function setQuizIdProperty(newExamId) {
         gr.update();
     }
 
-}]]></script>
+}
+]]></script>
         <sys_class_name>sys_script_fix</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-01 01:01:15</sys_created_on>
         <sys_id>1517fc40535612108dbe38f0a0490ed3</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>108</sys_mod_count>
         <sys_name>Generate Quiz from Script</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_fix_1517fc40535612108dbe38f0a0490ed3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-04 19:51:22</sys_updated_on>
+        <sys_updated_on>2024-12-12 17:00:36</sys_updated_on>
         <unloadable>false</unloadable>
     </sys_script_fix>
 </record_update>

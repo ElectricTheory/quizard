@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Configuration quality</display>
+        <metric display_value="">531a3037535212108dbe38f0a0490e4f</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 16:51:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b1a3037535212108dbe38f0a0490e63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Configuration quality</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_9b1a3037535212108dbe38f0a0490e63</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 16:51:13</sys_updated_on>
+        <unselected_image/>
+        <value>3</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_definition_9b1a3037535212108dbe38f0a0490e63</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition"><asmt_metric_definition action="INSERT_OR_UPDATE"><display>Configuration quality</display><metric display_value="">531a3037535212108dbe38f0a0490e4f</metric><normalization_input>0</normalization_input><order/><selected_image/><sys_class_name>asmt_metric_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-12 16:51:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9b1a3037535212108dbe38f0a0490e63</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Configuration quality</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_definition_9b1a3037535212108dbe38f0a0490e63</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-12 16:51:13</sys_updated_on><unselected_image/><value>3</value><x_560335_quizard_is_correct>false</x_560335_quizard_is_correct></asmt_metric_definition></record_update>]]></payload>
+        <payload_hash>-854374820</payload_hash>
+        <record_name>Configuration quality</record_name>
+        <reverted_from/>
+        <source>079a2930533112108dbe38f0a0490e0e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-11-08 16:09:57</sys_created_on>
+        <sys_id>bf0e787b535212108dbe38f0a0490eca</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1930c8a18080000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Assessment Metric Definition</type>
+        <update_guid>7f0e787b245212109d2a46e9a2b691ca</update_guid>
+        <update_guid_history>7f0e787b245212109d2a46e9a2b691ca:-854374820</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Configuration quality">b70e787b535212108dbe38f0a0490ecb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:08:28</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>64639ef77b30467ca7aa3beaf0b3d310</sys_id>
+        <sys_metadata>9b1a3037535212108dbe38f0a0490e63</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Configuration quality</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_9b1a3037535212108dbe38f0a0490e63</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_9b1a3037535212108dbe38f0a0490e63">bf0e787b535212108dbe38f0a0490eca</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:08:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

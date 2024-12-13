@@ -17,11 +17,11 @@ QuizardUtil.prototype = {
                 id: "",
                 dv: ""
             },
-			format: {},
-			question_count: null,
-			correct_count: null,
+            format: {},
+            question_count: null,
+            correct_count: null,
             found: false,
-			evaluation: {}
+            evaluation: {}
         };
 
         var assessGr = new GlideRecord('asmt_assessment_instance');
@@ -38,7 +38,7 @@ QuizardUtil.prototype = {
 
         // get quiz format
         var quizFormat = this.getQuizFormat(assessment.metric_type.id);
-		assessment.format = quizFormat;
+        assessment.format = quizFormat;
 
         // get user's submission results
         var submissionResults = this.getSubmission(assessId, quizFormat);
@@ -46,26 +46,26 @@ QuizardUtil.prototype = {
         // compare user's submission to correct answers
         var evaluated = this.evaluateSubmission(submissionResults, quizFormat);
 
-		var evalList = Object.values(evaluated);
+        var evalList = Object.values(evaluated);
 
         assessment.evaluation = evaluated;
 
-		assessment.question_count = evalList.length;
-		
-		var correctAnswers = evalList.filter(function(question) {
-			return question.answer_state === "correct";
-		});
+        assessment.question_count = evalList.length;
 
-		var incorrectAnswers = evalList.filter(function(question) {
-			return question.answer_state === "incorrect";
-		});
+        var correctAnswers = evalList.filter(function(question) {
+            return question.answer_state === "correct";
+        });
 
-		var incorrectIds = incorrectAnswers.map(function(question){
-			return question.question_id;
-		});
+        var incorrectAnswers = evalList.filter(function(question) {
+            return question.answer_state === "incorrect";
+        });
 
-		assessment.correct_count = correctAnswers.length;
-		assessment.incorrect_ids = incorrectIds;
+        var incorrectIds = incorrectAnswers.map(function(question) {
+            return question.question_id;
+        });
+
+        assessment.correct_count = correctAnswers.length;
+        assessment.incorrect_ids = incorrectIds;
 
         return assessment;
     },
@@ -101,7 +101,7 @@ QuizardUtil.prototype = {
             category.name = catGr.getDisplayValue('name');
             category.order = catGr.getValue('order');
             category.weight = catGr.getValue('weight');
-			category.question_ids = [];
+            category.question_ids = [];
 
             format.category.ids.push(catId);
             format.category.categories[catId] = category;
@@ -117,7 +117,7 @@ QuizardUtil.prototype = {
         while (questionGr.next()) {
 
             var questionId = questionGr.getUniqueValue();
-			var categoryId = questionGr.getValue('category');
+            var categoryId = questionGr.getValue('category');
 
             var question = {};
             question.name = questionGr.getDisplayValue('name');
@@ -125,9 +125,9 @@ QuizardUtil.prototype = {
             question.weight = questionGr.getValue('weight');
             question.answers = [];
             question.type_id = questionGr.getValue('datatype');
-			question.category_id = categoryId;
+            question.category_id = categoryId;
 
-			format.category.categories[catId].question_ids.push(questionId);
+            format.category.categories[catId].question_ids.push(questionId);
 
             format.question.ids.push(questionId);
             format.question.questions[questionId] = question;
@@ -198,7 +198,7 @@ QuizardUtil.prototype = {
 
     evaluateSubmission: function(submission, format) {
 
-		var resultsObj = {};
+        var resultsObj = {};
 
         // loop through all questions on quiz and compare results
         var allQuestions = format.question.questions;
@@ -214,7 +214,7 @@ QuizardUtil.prototype = {
                 weight: currentQuestion.weight,
                 answers: currentQuestion.answers,
                 user_responses: submission.question_responses[questionId],
-				question_id: questionId
+                question_id: questionId
             };
 
             var qType = currentQuestion.type_id;
@@ -222,9 +222,26 @@ QuizardUtil.prototype = {
             // scale = one answer
             if (qType === "scale") {
 
-                var correctAnswer = currentQuestion.answers.find(function(answer) {
-                    return answer.is_correct === "true";
-                });
+                var arrayUtil = new global.ArrayUtil();
+
+                var isArr = arrayUtil.ensureArray(currentQuestion.answers);
+                var correctAnswer = null;
+
+                if (!isArr) {
+
+                } else {
+
+					var nowArr = arrayUtil.convertArray(currentQuestion.answers);
+
+                    correctAnswer = nowArr.find(function(answer) {
+                        return answer.is_correct === "true";
+                    });
+
+                }
+
+				var corr = correctAnswer;
+
+
 
                 var correctVal = correctAnswer.value;
                 var userResponse = submission.question_responses[questionId][0];
@@ -250,13 +267,13 @@ QuizardUtil.prototype = {
                     return ans.value;
                 }).sort();
 
-				evalQuestion.correct_vals = correctVals;
+                evalQuestion.correct_vals = correctVals;
 
                 var correctStr = correctVals.join(',');
 
                 var userAnswers = evalQuestion.user_responses.sort();
                 var userAnswersStr = userAnswers.join(',');
-				
+
 
                 if (userAnswersStr === correctStr) {
                     evalQuestion.answer_state = "correct";
@@ -279,13 +296,13 @@ QuizardUtil.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-08 20:30:53</sys_created_on>
         <sys_id>543dde7453b512108dbe38f0a0490ee5</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>99</sys_mod_count>
         <sys_name>QuizardUtil</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_include_543dde7453b512108dbe38f0a0490ee5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-04 19:18:34</sys_updated_on>
+        <sys_updated_on>2024-12-11 18:52:06</sys_updated_on>
     </sys_script_include>
 </record_update>

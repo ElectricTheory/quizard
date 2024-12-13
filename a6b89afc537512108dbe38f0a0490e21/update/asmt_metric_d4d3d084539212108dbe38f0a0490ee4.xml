@@ -5,7 +5,7 @@
         <allow_add_info>false</allow_add_info>
         <allow_not_applicable>false</allow_not_applicable>
         <auto_gen>false</auto_gen>
-        <category display_value="New Quizs">5cd3d084539212108dbe38f0a0490ede</category>
+        <category/>
         <cond_question>always</cond_question>
         <condition/>
         <context/>
@@ -31,7 +31,7 @@
         <max_weight/>
         <maximum_normalization_input>false</maximum_normalization_input>
         <method>assessment</method>
-        <metric_type display_value="New QuizsNamer Retake">98d3d084539212108dbe38f0a0490e35</metric_type>
+        <metric_type display_value="">98d3d084539212108dbe38f0a0490e35</metric_type>
         <min>0</min>
         <name>New Multiple Selection</name>
         <order>100</order>

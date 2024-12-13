@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Localized user interfaces</display>
+        <metric display_value="">cf1afcf3535212108dbe38f0a0490ecb</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 16:51:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cf1afcf3535212108dbe38f0a0490ed1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Localized user interfaces</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_cf1afcf3535212108dbe38f0a0490ed1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 16:51:12</sys_updated_on>
+        <unselected_image/>
+        <value>2</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_definition_cf1afcf3535212108dbe38f0a0490ed1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition"><asmt_metric_definition action="INSERT_OR_UPDATE"><display>Localized user interfaces</display><metric display_value="">cf1afcf3535212108dbe38f0a0490ecb</metric><normalization_input>0</normalization_input><order/><selected_image/><sys_class_name>asmt_metric_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-12 16:51:12</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cf1afcf3535212108dbe38f0a0490ed1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Localized user interfaces</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_definition_cf1afcf3535212108dbe38f0a0490ed1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-12 16:51:12</sys_updated_on><unselected_image/><value>2</value><x_560335_quizard_is_correct>false</x_560335_quizard_is_correct></asmt_metric_definition></record_update>]]></payload>
+        <payload_hash>1571994766</payload_hash>
+        <record_name>Localized user interfaces</record_name>
+        <reverted_from/>
+        <source>079a2930533112108dbe38f0a0490e0e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-11-08 16:09:57</sys_created_on>
+        <sys_id>661ebc7b535212108dbe38f0a0490ed3</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1930c8a18080000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Assessment Metric Definition</type>
+        <update_guid>261ebc7b3f521210db675cb3f72ea4d3</update_guid>
+        <update_guid_history>261ebc7b3f521210db675cb3f72ea4d3:1571994766</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Localized user interfaces">6e1ebc7b535212108dbe38f0a0490ed3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:08:38</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>78fe4baf51e1471c81f61d5227011164</sys_id>
+        <sys_metadata>cf1afcf3535212108dbe38f0a0490ed1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Localized user interfaces</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_cf1afcf3535212108dbe38f0a0490ed1</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_cf1afcf3535212108dbe38f0a0490ed1">661ebc7b535212108dbe38f0a0490ed3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:08:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

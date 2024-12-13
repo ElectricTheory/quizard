@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Deliver</display>
+        <metric display_value="Which phase of the Now Create Methodology includes go-live planning?">f3e4809d531212108dbe38f0a0490ea7</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 18:34:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>37e4809d531212108dbe38f0a0490eb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Deliver</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_37e4809d531212108dbe38f0a0490eb0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 18:34:04</sys_updated_on>
+        <unselected_image/>
+        <value>3</value>
+        <x_560335_quizard_is_correct>true</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_definition_37e4809d531212108dbe38f0a0490eb0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition"><asmt_metric_definition action="INSERT_OR_UPDATE"><display>Deliver</display><metric display_value="Which phase of the Now Create Methodology includes go-live planning?">f3e4809d531212108dbe38f0a0490ea7</metric><normalization_input>0</normalization_input><order/><selected_image/><sys_class_name>asmt_metric_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 18:34:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>37e4809d531212108dbe38f0a0490eb0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Deliver</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_definition_37e4809d531212108dbe38f0a0490eb0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 18:34:04</sys_updated_on><unselected_image/><value>3</value><x_560335_quizard_is_correct>true</x_560335_quizard_is_correct></asmt_metric_definition></record_update>]]></payload>
+        <payload_hash>194530870</payload_hash>
+        <record_name>Deliver</record_name>
+        <reverted_from/>
+        <source>079a2930533112108dbe38f0a0490e0e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-11-08 16:09:57</sys_created_on>
+        <sys_id>a04ff43f535212108dbe38f0a0490e12</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1930c8a18080000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Assessment Metric Definition</type>
+        <update_guid>604ff43f65521210e59b3e92817fc712</update_guid>
+        <update_guid_history>604ff43f65521210e59b3e92817fc712:194530870</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Deliver">e84ff43f535212108dbe38f0a0490e10</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:13:42</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>a2ac32d3ebd148cdba9ad51b022dab89</sys_id>
+        <sys_metadata>37e4809d531212108dbe38f0a0490eb0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Deliver</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_37e4809d531212108dbe38f0a0490eb0</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_37e4809d531212108dbe38f0a0490eb0">a04ff43f535212108dbe38f0a0490e12</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:13:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

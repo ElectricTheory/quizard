@@ -27,12 +27,12 @@
         <duration/>
         <field_validation/>
         <mandatory>false</mandatory>
-        <max>3</max>
+        <max>0</max>
         <max_weight/>
         <maximum_normalization_input>false</maximum_normalization_input>
         <method>assessment</method>
-        <metric_type display_value="">d0fc9ef053b512108dbe38f0a0490e04</metric_type>
-        <min>1</min>
+        <metric_type/>
+        <min>0</min>
         <name>New Scale</name>
         <order>200</order>
         <plugin/>
@@ -51,17 +51,18 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6cfc5a7453b512108dbe38f0a0490efb</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>New Scale</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>asmt_metric_6cfc5a7453b512108dbe38f0a0490efb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-08 19:51:44</sys_updated_on>
+        <sys_updated_on>2024-12-12 17:13:45</sys_updated_on>
         <template/>
         <value_parameters/>
         <weight>10</weight>
+        <x_560335_quizard_tags/>
     </asmt_metric>
     <sys_translated_text action="delete_multiple" query="documentkey=6cfc5a7453b512108dbe38f0a0490efb"/>
 </record_update>

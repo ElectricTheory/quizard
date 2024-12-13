@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter/>
+        <metric_type/>
+        <name/>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-27 18:28:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a370ccc7530a52108dbe38f0a0490e13</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_a370ccc7530a52108dbe38f0a0490e13</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:18:20</sys_updated_on>
+        <table/>
+        <total_metrics>1</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=a370ccc7530a52108dbe38f0a0490e13"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_a370ccc7530a52108dbe38f0a0490e13</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter/><metric_type/><name/><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-27 18:28:20</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a370ccc7530a52108dbe38f0a0490e13</sys_id><sys_mod_count>3</sys_mod_count><sys_name/><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_a370ccc7530a52108dbe38f0a0490e13</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-12 17:18:20</sys_updated_on><table/><total_metrics>1</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=a370ccc7530a52108dbe38f0a0490e13"/></record_update>]]></payload>
+        <payload_hash>614592527</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>604c39a1531612108dbe38f0a0490e3d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:18:20</sys_created_on>
+        <sys_id>645045bf535212108dbe38f0a0490e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193bbe0ee930000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:18:20</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>e85045bf95521210f0a229a1f7ad0b58</update_guid>
+        <update_guid_history>e85045bf95521210f0a229a1f7ad0b58:614592527,a01041bf99521210a93b44bc57cba2a0:-252459698,a770ccc7d50a5210078b5d52961361eb:614592527,eb70ccc7700a521043b883d9cb7645e7:1274300386</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">9790cdbf535212108dbe38f0a0490e81</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:19:37</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>2fb777562b454c7e8f98f9eb0cb3d1e4</sys_id>
+        <sys_metadata>a370ccc7530a52108dbe38f0a0490e13</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_a370ccc7530a52108dbe38f0a0490e13</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_a370ccc7530a52108dbe38f0a0490e13">645045bf535212108dbe38f0a0490e59</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:19:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

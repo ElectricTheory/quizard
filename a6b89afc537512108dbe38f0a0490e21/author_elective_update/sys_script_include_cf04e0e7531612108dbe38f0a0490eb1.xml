@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_560335_quizard.QuizardDump</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>QuizardDump</name>
+        <script><![CDATA[var QuizardDump = Class.create();
+QuizardDump.prototype = {
+    initialize: function() {
+        // Initialization code if needed
+    },
+    
+    // Define your constants as static properties
+    QUESTIONS:  [{
+        "display": "What is the main purpose of testing on the Now Platform?",
+        "options": ["To validate configurations meet requirements", "To verify system specifications", "To confirm new functionality does not introduce regressions", "To ensure out-of-box configurations are fully tested", "To create automated workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["To validate configurations meet requirements", "To verify system specifications", "To confirm new functionality does not introduce regressions"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing focuses on verifying the smallest software components?",
+        "options": ["System Testing", "Unit Testing", "User Acceptance Testing (UAT)", "Integration Testing", "Performance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Unit Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the Automated Testing Framework (ATF) best used for?",
+        "options": ["User observation during testing", "Creating and running automated tests for ServiceNow", "Ensuring compliance with industry standards", "Testing the user interface of other systems", "Performing penetration testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Creating and running automated tests for ServiceNow"],
+        "tags": "ai"
+    }, {
+        "display": "Which of these are advantages of automated testing?",
+        "options": ["Significant reduction in execution time", "Human observation during tests", "Improved reliability by eliminating human errors", "Increased cost of setup and maintenance", "Enhanced creativity in exploratory testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Significant reduction in execution time", "Improved reliability by eliminating human errors"],
+        "tags": "ai"
+    }, {
+        "display": "What is the primary focus of regression testing?",
+        "options": ["Validating application usability", "Ensuring stability after code changes", "Adapting applications for local languages", "Simulating production load", "Testing only new features"],
+        "category": "Testing Leading Practices",
+        "correct": ["Ensuring stability after code changes"],
+        "tags": "ai"
+    }, {
+        "display": "What is a key disadvantage of manual testing?",
+        "options": ["It requires tools and scripts", "It is prone to human error", "It is faster than automated testing", "It eliminates creative exploration", "It cannot test regressions"],
+        "category": "Testing Leading Practices",
+        "correct": ["It is prone to human error"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing involves end users validating business outcomes?",
+        "options": ["Unit Testing", "System Testing", "User Acceptance Testing (UAT)", "Integration Testing", "Load Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["User Acceptance Testing (UAT)"],
+        "tags": "ai"
+    }, {
+        "display": "Which of the following is a non-functional testing type?",
+        "options": ["Unit Testing", "Localization Testing", "User Acceptance Testing", "System Testing", "Ad Hoc Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Localization Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the purpose of load testing?",
+        "options": ["Validate configurations meet requirements", "Simulate anticipated production consumption", "Ensure code quality during development", "Verify UI usability", "Test configurations of isolated components"],
+        "category": "Testing Leading Practices",
+        "correct": ["Simulate anticipated production consumption"],
+        "tags": "ai"
+    }, {
+        "display": "What is a smoke test?",
+        "options": ["A non-functional test for speed and scalability", "A quick test ensuring critical functions work", "A test conducted after UAT", "An exploratory testing type", "A test to check UI responsiveness"],
+        "category": "Testing Leading Practices",
+        "correct": ["A quick test ensuring critical functions work"],
+        "tags": "ai"
+    }, {
+        "display": "What is a benefit of exploratory testing?",
+        "options": ["Automation of repetitive tasks", "Validation of regression stability", "Improved creative problem-solving", "Standardized testing processes", "Faster execution times"],
+        "category": "Testing Leading Practices",
+        "correct": ["Improved creative problem-solving"],
+        "tags": "ai"
+    }, {
+        "display": "What should be tested first using a risk-based approach?",
+        "options": ["Out-of-box configurations", "Business-critical processes", "Minor feature updates", "Third-party integrations", "Exploratory workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["Business-critical processes"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing type verifies that components work together holistically?",
+        "options": ["Unit Testing", "System Testing", "Ad Hoc Testing", "Load Testing", "Penetration Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["System Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What does ATF stand for in ServiceNow?",
+        "options": ["Automated Test Framework", "Advanced Testing Functions", "Automated Task Feature", "Application Testing Framework", "Automated Troubleshooting Framework"],
+        "category": "Testing Leading Practices",
+        "correct": ["Automated Test Framework"],
+        "tags": "ai"
+    }, {
+        "display": "What is one limitation of the Automated Testing Framework (ATF)?",
+        "options": ["Cannot test regressions", "Limited support for UI elements", "Requires significant manual effort", "Lacks repeatable test processes", "Cannot test integrations"],
+        "category": "Testing Leading Practices",
+        "correct": ["Limited support for UI elements"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing method is most suitable for usability testing?",
+        "options": ["Automated Testing", "Manual Testing", "Load Testing", "Regression Testing", "Smoke Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Manual Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is one key feature of Test Management 2.0?",
+        "options": ["Automation of exploratory tests", "Streamlined creation of manual test cases", "Integration with third-party UI testing tools", "Support for load testing environments", "Built-in AI testing capabilities"],
+        "category": "Testing Leading Practices",
+        "correct": ["Streamlined creation of manual test cases"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing includes checking speed, stability, and scalability?",
+        "options": ["Performance Testing", "Unit Testing", "Localization Testing", "Load Testing", "Exploratory Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Performance Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the goal of upgrade testing?",
+        "options": ["To identify security vulnerabilities", "To validate existing functionality after upgrades", "To localize applications for specific languages", "To test isolated software components", "To automate regression tests"],
+        "category": "Testing Leading Practices",
+        "correct": ["To validate existing functionality after upgrades"],
+        "tags": "ai"
+    }, {
+        "display": "Which test type is best for verifying internationalization adaptations?",
+        "options": ["Localization Testing", "Unit Testing", "System Testing", "Load Testing", "User Acceptance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Localization Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is penetration testing designed to evaluate?",
+        "options": ["Application usability", "Software localization", "Security vulnerabilities", "Code quality", "Regression stability"],
+        "category": "Testing Leading Practices",
+        "correct": ["Security vulnerabilities"],
+        "tags": "ai"
+    }, {
+        "display": "What are quick start tests?",
+        "options": ["Out-of-box tests to guide new testing scenarios", "Fully automated regression tests", "Customizable manual test scripts", "Ad hoc tests for creative exploration", "Performance benchmarks for load testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Out-of-box tests to guide new testing scenarios"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing uses customer feedback for final validation?",
+        "options": ["Unit Testing", "System Testing", "User Acceptance Testing (UAT)", "Regression Testing", "Performance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["User Acceptance Testing (UAT)"],
+        "tags": "ai"
+    }, {
+        "display": "What is a recommended practice for exploratory testing?",
+        "options": ["Follow a predefined script", "Focus on breaking the application", "Automate test cases", "Test configurations of isolated components", "Validate regression scenarios"],
+        "category": "Testing Leading Practices",
+        "correct": ["Focus on breaking the application"],
+        "tags": "ai"
+    }, {
+        "display": "Which is an example of non-functional testing?",
+        "options": ["Load Testing", "Unit Testing", "System Testing", "Exploratory Testing", "Ad Hoc Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Load Testing"],
+        "tags": "ai"
+    }, {
+        "display": "Why is automated testing preferred for regression testing?",
+        "options": ["It involves creative problem-solving", "It eliminates repetitive manual effort", "It requires human observation", "It focuses on business-critical processes", "It ensures all users participate"],
+        "category": "Testing Leading Practices",
+        "correct": ["It eliminates repetitive manual effort"],
+        "tags": "ai"
+    }, {
+        "display": "What does load testing simulate?",
+        "options": ["Localized user behavior", "Isolated component testing", "Production-like environment", "Creative test scenarios", "Automated workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["Production-like environment"],
+        "tags": "ai"
+    }, {
+        "display": "What is the role of performance testing?",
+        "options": ["To ensure configurations meet functional requirements", "To identify issues with speed and scalability", "To validate regression test cases", "To confirm UI usability", "To verify system integrations"],
+        "category": "Testing Leading Practices",
+        "correct": ["To identify issues with speed and scalability"],
+        "tags": "ai"
+    }, {
+        "display": "What is the first step in risk-based testing?",
+        "options": ["Test all OOB configurations", "Identify business-critical processes", "Validate existing test cases", "Conduct exploratory testing", "Develop a performance test plan"],
+        "category": "Testing Leading Practices",
+        "correct": ["Identify business-critical processes"],
+        "tags": "ai"
+    }, {
+        "display": "What is the benefit of Test Management 2.0?",
+        "options": ["Reduces need for exploratory testing", "Streamlines manual testing processes", "Integrates with ATF for automated scripts", "Eliminates regression test planning", "Supports penetration testing out-of-box"],
+        "category": "Testing Leading Practices",
+        "correct": ["Streamlines manual testing processes"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing is conducted to evaluate software behavior under stress?",
+        "options": ["Load Testing", "Unit Testing", "Stress Testing", "Localization Testing", "Exploratory Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Stress Testing"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing helps confirm that new releases do not break existing functionality?",
+        "options": ["Regression Testing", "User Acceptance Testing", "System Testing", "Load Testing", "Localization Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Regression Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is required before conducting penetration testing in ServiceNow?",
+        "options": ["Approval from ServiceNow", "A minimum HealthScan score", "Latest release and patch updates", "Implementation of hardening guide", "All of the above"],
+        "category": "Testing Leading Practices",
+        "correct": ["All of the above"],
+        "tags": "ai"
+    }, {
+        "display": "What does regression testing validate?",
+        "options": ["UI responsiveness", "Stability after updates", "Localized user interfaces", "Exploratory test scenarios", "Manual test coverage"],
+        "category": "Testing Leading Practices",
+        "correct": ["Stability after updates"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing involves evaluating scalability and speed?",
+        "options": ["Performance Testing", "Unit Testing", "System Testing", "Localization Testing", "Load Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Performance Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the main goal of User Acceptance Testing (UAT)?",
+        "options": ["Validate software compliance", "Ensure user feedback meets business goals", "Automate critical tests", "Simulate production environments", "Test isolated configurations"],
+        "category": "Testing Leading Practices",
+        "correct": ["Ensure user feedback meets business goals"],
+        "tags": "ai"
+    }, {
+        "display": "What is the key limitation of manual testing?",
+        "options": ["Lacks human observation", "Requires tools for execution", "Is less accurate due to human error", "Cannot validate regression stability", "Only applicable to creative tasks"],
+        "category": "Testing Leading Practices",
+        "correct": ["Is less accurate due to human error"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing type is ideal for ad hoc scenarios?",
+        "options": ["Automated Testing", "Manual Testing", "Performance Testing", "Load Testing", "Regression Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Manual Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the primary advantage of automated testing?",
+        "options": ["Enhanced creativity", "Human feedback", "Faster execution", "Localized adaptability", "Simplified workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["Faster execution"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing practice should focus on customer satisfaction?",
+        "options": ["Unit Testing", "Exploratory Testing", "System Testing", "User Acceptance Testing", "Load Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["User Acceptance Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is a key characteristic of performance testing?",
+        "options": ["Human observation", "Usability feedback", "Scalability insights", "Creative exploration", "Localized adaptability"],
+        "category": "Testing Leading Practices",
+        "correct": ["Scalability insights"],
+        "tags": "ai"
+    }, {
+        "display": "Why is exploratory testing valuable?",
+        "options": ["It is standardized and repeatable", "It minimizes testing time", "It uses automated tools", "It identifies unpredictable issues", "It replaces regression tests"],
+        "category": "Testing Leading Practices",
+        "correct": ["It identifies unpredictable issues"],
+        "tags": "ai"
+    }, {
+        "display": "What does usability testing assess?",
+        "options": ["System performance", "User-friendliness", "Localized components", "Configuration quality", "Exploratory workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["User-friendliness"],
+        "tags": "ai"
+    }, {
+        "display": "What type of testing involves executing tasks multiple times?",
+        "options": ["Regression Testing", "Load Testing", "Stress Testing", "Repeated Execution Testing", "Performance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Repeated Execution Testing"],
+        "tags": "ai"
+    }],
+    
+
+    
+    type: 'QuizardDump'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 20:36:49</sys_created_on>
+        <sys_id>cf04e0e7531612108dbe38f0a0490eb1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>QuizardDump</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_script_include_cf04e0e7531612108dbe38f0a0490eb1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 16:47:17</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>sys_script_include_cf04e0e7531612108dbe38f0a0490eb1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_560335_quizard.QuizardDump&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;QuizardDump&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var QuizardDump = Class.create();
+QuizardDump.prototype = {
+    initialize: function() {
+        // Initialization code if needed
+    },
+    
+    // Define your constants as static properties
+    QUESTIONS:  [{
+        "display": "What is the main purpose of testing on the Now Platform?",
+        "options": ["To validate configurations meet requirements", "To verify system specifications", "To confirm new functionality does not introduce regressions", "To ensure out-of-box configurations are fully tested", "To create automated workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["To validate configurations meet requirements", "To verify system specifications", "To confirm new functionality does not introduce regressions"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing focuses on verifying the smallest software components?",
+        "options": ["System Testing", "Unit Testing", "User Acceptance Testing (UAT)", "Integration Testing", "Performance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Unit Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the Automated Testing Framework (ATF) best used for?",
+        "options": ["User observation during testing", "Creating and running automated tests for ServiceNow", "Ensuring compliance with industry standards", "Testing the user interface of other systems", "Performing penetration testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Creating and running automated tests for ServiceNow"],
+        "tags": "ai"
+    }, {
+        "display": "Which of these are advantages of automated testing?",
+        "options": ["Significant reduction in execution time", "Human observation during tests", "Improved reliability by eliminating human errors", "Increased cost of setup and maintenance", "Enhanced creativity in exploratory testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Significant reduction in execution time", "Improved reliability by eliminating human errors"],
+        "tags": "ai"
+    }, {
+        "display": "What is the primary focus of regression testing?",
+        "options": ["Validating application usability", "Ensuring stability after code changes", "Adapting applications for local languages", "Simulating production load", "Testing only new features"],
+        "category": "Testing Leading Practices",
+        "correct": ["Ensuring stability after code changes"],
+        "tags": "ai"
+    }, {
+        "display": "What is a key disadvantage of manual testing?",
+        "options": ["It requires tools and scripts", "It is prone to human error", "It is faster than automated testing", "It eliminates creative exploration", "It cannot test regressions"],
+        "category": "Testing Leading Practices",
+        "correct": ["It is prone to human error"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing involves end users validating business outcomes?",
+        "options": ["Unit Testing", "System Testing", "User Acceptance Testing (UAT)", "Integration Testing", "Load Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["User Acceptance Testing (UAT)"],
+        "tags": "ai"
+    }, {
+        "display": "Which of the following is a non-functional testing type?",
+        "options": ["Unit Testing", "Localization Testing", "User Acceptance Testing", "System Testing", "Ad Hoc Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Localization Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the purpose of load testing?",
+        "options": ["Validate configurations meet requirements", "Simulate anticipated production consumption", "Ensure code quality during development", "Verify UI usability", "Test configurations of isolated components"],
+        "category": "Testing Leading Practices",
+        "correct": ["Simulate anticipated production consumption"],
+        "tags": "ai"
+    }, {
+        "display": "What is a smoke test?",
+        "options": ["A non-functional test for speed and scalability", "A quick test ensuring critical functions work", "A test conducted after UAT", "An exploratory testing type", "A test to check UI responsiveness"],
+        "category": "Testing Leading Practices",
+        "correct": ["A quick test ensuring critical functions work"],
+        "tags": "ai"
+    }, {
+        "display": "What is a benefit of exploratory testing?",
+        "options": ["Automation of repetitive tasks", "Validation of regression stability", "Improved creative problem-solving", "Standardized testing processes", "Faster execution times"],
+        "category": "Testing Leading Practices",
+        "correct": ["Improved creative problem-solving"],
+        "tags": "ai"
+    }, {
+        "display": "What should be tested first using a risk-based approach?",
+        "options": ["Out-of-box configurations", "Business-critical processes", "Minor feature updates", "Third-party integrations", "Exploratory workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["Business-critical processes"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing type verifies that components work together holistically?",
+        "options": ["Unit Testing", "System Testing", "Ad Hoc Testing", "Load Testing", "Penetration Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["System Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What does ATF stand for in ServiceNow?",
+        "options": ["Automated Test Framework", "Advanced Testing Functions", "Automated Task Feature", "Application Testing Framework", "Automated Troubleshooting Framework"],
+        "category": "Testing Leading Practices",
+        "correct": ["Automated Test Framework"],
+        "tags": "ai"
+    }, {
+        "display": "What is one limitation of the Automated Testing Framework (ATF)?",
+        "options": ["Cannot test regressions", "Limited support for UI elements", "Requires significant manual effort", "Lacks repeatable test processes", "Cannot test integrations"],
+        "category": "Testing Leading Practices",
+        "correct": ["Limited support for UI elements"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing method is most suitable for usability testing?",
+        "options": ["Automated Testing", "Manual Testing", "Load Testing", "Regression Testing", "Smoke Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Manual Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is one key feature of Test Management 2.0?",
+        "options": ["Automation of exploratory tests", "Streamlined creation of manual test cases", "Integration with third-party UI testing tools", "Support for load testing environments", "Built-in AI testing capabilities"],
+        "category": "Testing Leading Practices",
+        "correct": ["Streamlined creation of manual test cases"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing includes checking speed, stability, and scalability?",
+        "options": ["Performance Testing", "Unit Testing", "Localization Testing", "Load Testing", "Exploratory Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Performance Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the goal of upgrade testing?",
+        "options": ["To identify security vulnerabilities", "To validate existing functionality after upgrades", "To localize applications for specific languages", "To test isolated software components", "To automate regression tests"],
+        "category": "Testing Leading Practices",
+        "correct": ["To validate existing functionality after upgrades"],
+        "tags": "ai"
+    }, {
+        "display": "Which test type is best for verifying internationalization adaptations?",
+        "options": ["Localization Testing", "Unit Testing", "System Testing", "Load Testing", "User Acceptance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Localization Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is penetration testing designed to evaluate?",
+        "options": ["Application usability", "Software localization", "Security vulnerabilities", "Code quality", "Regression stability"],
+        "category": "Testing Leading Practices",
+        "correct": ["Security vulnerabilities"],
+        "tags": "ai"
+    }, {
+        "display": "What are quick start tests?",
+        "options": ["Out-of-box tests to guide new testing scenarios", "Fully automated regression tests", "Customizable manual test scripts", "Ad hoc tests for creative exploration", "Performance benchmarks for load testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Out-of-box tests to guide new testing scenarios"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing uses customer feedback for final validation?",
+        "options": ["Unit Testing", "System Testing", "User Acceptance Testing (UAT)", "Regression Testing", "Performance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["User Acceptance Testing (UAT)"],
+        "tags": "ai"
+    }, {
+        "display": "What is a recommended practice for exploratory testing?",
+        "options": ["Follow a predefined script", "Focus on breaking the application", "Automate test cases", "Test configurations of isolated components", "Validate regression scenarios"],
+        "category": "Testing Leading Practices",
+        "correct": ["Focus on breaking the application"],
+        "tags": "ai"
+    }, {
+        "display": "Which is an example of non-functional testing?",
+        "options": ["Load Testing", "Unit Testing", "System Testing", "Exploratory Testing", "Ad Hoc Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Load Testing"],
+        "tags": "ai"
+    }, {
+        "display": "Why is automated testing preferred for regression testing?",
+        "options": ["It involves creative problem-solving", "It eliminates repetitive manual effort", "It requires human observation", "It focuses on business-critical processes", "It ensures all users participate"],
+        "category": "Testing Leading Practices",
+        "correct": ["It eliminates repetitive manual effort"],
+        "tags": "ai"
+    }, {
+        "display": "What does load testing simulate?",
+        "options": ["Localized user behavior", "Isolated component testing", "Production-like environment", "Creative test scenarios", "Automated workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["Production-like environment"],
+        "tags": "ai"
+    }, {
+        "display": "What is the role of performance testing?",
+        "options": ["To ensure configurations meet functional requirements", "To identify issues with speed and scalability", "To validate regression test cases", "To confirm UI usability", "To verify system integrations"],
+        "category": "Testing Leading Practices",
+        "correct": ["To identify issues with speed and scalability"],
+        "tags": "ai"
+    }, {
+        "display": "What is the first step in risk-based testing?",
+        "options": ["Test all OOB configurations", "Identify business-critical processes", "Validate existing test cases", "Conduct exploratory testing", "Develop a performance test plan"],
+        "category": "Testing Leading Practices",
+        "correct": ["Identify business-critical processes"],
+        "tags": "ai"
+    }, {
+        "display": "What is the benefit of Test Management 2.0?",
+        "options": ["Reduces need for exploratory testing", "Streamlines manual testing processes", "Integrates with ATF for automated scripts", "Eliminates regression test planning", "Supports penetration testing out-of-box"],
+        "category": "Testing Leading Practices",
+        "correct": ["Streamlines manual testing processes"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing is conducted to evaluate software behavior under stress?",
+        "options": ["Load Testing", "Unit Testing", "Stress Testing", "Localization Testing", "Exploratory Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Stress Testing"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing helps confirm that new releases do not break existing functionality?",
+        "options": ["Regression Testing", "User Acceptance Testing", "System Testing", "Load Testing", "Localization Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Regression Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is required before conducting penetration testing in ServiceNow?",
+        "options": ["Approval from ServiceNow", "A minimum HealthScan score", "Latest release and patch updates", "Implementation of hardening guide", "All of the above"],
+        "category": "Testing Leading Practices",
+        "correct": ["All of the above"],
+        "tags": "ai"
+    }, {
+        "display": "What does regression testing validate?",
+        "options": ["UI responsiveness", "Stability after updates", "Localized user interfaces", "Exploratory test scenarios", "Manual test coverage"],
+        "category": "Testing Leading Practices",
+        "correct": ["Stability after updates"],
+        "tags": "ai"
+    }, {
+        "display": "Which type of testing involves evaluating scalability and speed?",
+        "options": ["Performance Testing", "Unit Testing", "System Testing", "Localization Testing", "Load Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Performance Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the main goal of User Acceptance Testing (UAT)?",
+        "options": ["Validate software compliance", "Ensure user feedback meets business goals", "Automate critical tests", "Simulate production environments", "Test isolated configurations"],
+        "category": "Testing Leading Practices",
+        "correct": ["Ensure user feedback meets business goals"],
+        "tags": "ai"
+    }, {
+        "display": "What is the key limitation of manual testing?",
+        "options": ["Lacks human observation", "Requires tools for execution", "Is less accurate due to human error", "Cannot validate regression stability", "Only applicable to creative tasks"],
+        "category": "Testing Leading Practices",
+        "correct": ["Is less accurate due to human error"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing type is ideal for ad hoc scenarios?",
+        "options": ["Automated Testing", "Manual Testing", "Performance Testing", "Load Testing", "Regression Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Manual Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is the primary advantage of automated testing?",
+        "options": ["Enhanced creativity", "Human feedback", "Faster execution", "Localized adaptability", "Simplified workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["Faster execution"],
+        "tags": "ai"
+    }, {
+        "display": "Which testing practice should focus on customer satisfaction?",
+        "options": ["Unit Testing", "Exploratory Testing", "System Testing", "User Acceptance Testing", "Load Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["User Acceptance Testing"],
+        "tags": "ai"
+    }, {
+        "display": "What is a key characteristic of performance testing?",
+        "options": ["Human observation", "Usability feedback", "Scalability insights", "Creative exploration", "Localized adaptability"],
+        "category": "Testing Leading Practices",
+        "correct": ["Scalability insights"],
+        "tags": "ai"
+    }, {
+        "display": "Why is exploratory testing valuable?",
+        "options": ["It is standardized and repeatable", "It minimizes testing time", "It uses automated tools", "It identifies unpredictable issues", "It replaces regression tests"],
+        "category": "Testing Leading Practices",
+        "correct": ["It identifies unpredictable issues"],
+        "tags": "ai"
+    }, {
+        "display": "What does usability testing assess?",
+        "options": ["System performance", "User-friendliness", "Localized components", "Configuration quality", "Exploratory workflows"],
+        "category": "Testing Leading Practices",
+        "correct": ["User-friendliness"],
+        "tags": "ai"
+    }, {
+        "display": "What type of testing involves executing tasks multiple times?",
+        "options": ["Regression Testing", "Load Testing", "Stress Testing", "Repeated Execution Testing", "Performance Testing"],
+        "category": "Testing Leading Practices",
+        "correct": ["Repeated Execution Testing"],
+        "tags": "ai"
+    }],
+    
+
+    
+    type: 'QuizardDump'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-11 20:36:49&lt;/sys_created_on&gt;&lt;sys_id&gt;cf04e0e7531612108dbe38f0a0490eb1&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;QuizardDump&lt;/sys_name&gt;&lt;sys_package display_value="Quizard" source="x_560335_quizard"&gt;a6b89afc537512108dbe38f0a0490e21&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Quizard"&gt;a6b89afc537512108dbe38f0a0490e21&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_cf04e0e7531612108dbe38f0a0490eb1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-12 16:47:17&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-972863028</payload_hash>
+        <record_name>QuizardDump</record_name>
+        <reverted_from/>
+        <source>604c39a1531612108dbe38f0a0490e3d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 16:47:17</sys_created_on>
+        <sys_id>e13970b3535212108dbe38f0a0490e66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193bbc47f960000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 16:47:17</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>653970b3b0521210ded7aaa74965b665</update_guid>
+        <update_guid_history>653970b3b0521210ded7aaa74965b665:-972863028,8e242ca778161210e40c690e08996088:-1314137590</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:07:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>3195fc3bd1de4bf3b1dd14098ec6f821</sys_id>
+        <sys_metadata>cf04e0e7531612108dbe38f0a0490eb1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>QuizardDump</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>sys_script_include_cf04e0e7531612108dbe38f0a0490eb1</sys_update_name>
+        <sys_update_version display_value="sys_script_include_cf04e0e7531612108dbe38f0a0490eb1">e13970b3535212108dbe38f0a0490e66</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:07:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

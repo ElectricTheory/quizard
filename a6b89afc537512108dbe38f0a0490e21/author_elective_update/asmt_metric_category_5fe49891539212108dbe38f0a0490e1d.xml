@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=5fe4d091539212108dbe38f0a0490e7d^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="5fe4d091539212108dbe38f0a0490e7d"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">5fe4d091539212108dbe38f0a0490e7d</metric_type>
+        <name>Go-Live Planning</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 19:43:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5fe49891539212108dbe38f0a0490e1d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Go-Live Planning</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_5fe49891539212108dbe38f0a0490e1d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:09:50</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=5fe49891539212108dbe38f0a0490e1d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_5fe49891539212108dbe38f0a0490e1d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=5fe4d091539212108dbe38f0a0490e7d^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="5fe4d091539212108dbe38f0a0490e7d"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">5fe4d091539212108dbe38f0a0490e7d</metric_type><name>Go-Live Planning</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 19:43:56</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5fe49891539212108dbe38f0a0490e1d</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Go-Live Planning</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_5fe49891539212108dbe38f0a0490e1d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-12 17:09:50</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=5fe49891539212108dbe38f0a0490e1d"/></record_update>]]></payload>
+        <payload_hash>1731108492</payload_hash>
+        <record_name>Go-Live Planning</record_name>
+        <reverted_from/>
+        <source>604c39a1531612108dbe38f0a0490e3d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:09:50</sys_created_on>
+        <sys_id>4c6e3cbb535212108dbe38f0a0490e9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193bbd924a60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:09:50</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>046e3cbb3652121097fe3d8df3268e9b</update_guid>
+        <update_guid_history>046e3cbb3652121097fe3d8df3268e9b:1731108492,006e3cbb7252121024ebf3a2cd764a9a:-1696806579</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Go-Live Planning">006e3cbb535212108dbe38f0a0490ea0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:09:50</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>15872d2fa40340908031fb7a6e3b8210</sys_id>
+        <sys_metadata>5fe49891539212108dbe38f0a0490e1d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Go-Live Planning</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_5fe49891539212108dbe38f0a0490e1d</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_5fe49891539212108dbe38f0a0490e1d">4c6e3cbb535212108dbe38f0a0490e9b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:09:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

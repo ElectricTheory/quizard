@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_type">
+    <asmt_metric_type action="DELETE">
+        <active>true</active>
+        <allow_public>false</allow_public>
+        <allow_retake>false</allow_retake>
+        <anonymize>false</anonymize>
+        <business_rule/>
+        <chat_survey>false</chat_survey>
+        <condition table="asmt_metric_type">sys_id=7271905d535212108dbe38f0a0490ec3^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="7271905d535212108dbe38f0a0490ec3"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <default_filter/>
+        <delete_business_rule/>
+        <description/>
+        <disable_ui_action/>
+        <display_all_filters>false</display_all_filters>
+        <display_field>name</display_field>
+        <duration>1970-01-15 00:00:00</duration>
+        <enable_ui_action/>
+        <end_note/>
+        <enforce_condition>false</enforce_condition>
+        <evaluation_method>quiz</evaluation_method>
+        <filter_condition/>
+        <filter_table/>
+        <introduction/>
+        <job/>
+        <live_feed>false</live_feed>
+        <name>new_name_here</name>
+        <not_show_intro_note>false</not_show_intro_note>
+        <notify_if_overdue>false</notify_if_overdue>
+        <notify_user>true</notify_user>
+        <one_click_survey>false</one_click_survey>
+        <overdue_notify_user/>
+        <portal_pagination>category</portal_pagination>
+        <publish_state>published</publish_state>
+        <roles/>
+        <sample_metric/>
+        <scale_factor>100</scale_factor>
+        <schedule_period>0</schedule_period>
+        <schedule_type>on_demand</schedule_type>
+        <scoring_type>percent</scoring_type>
+        <signature/>
+        <source_table/>
+        <survey_owners>6816f79cc0a8016401c5a33be04be441</survey_owners>
+        <sys_class_name>asmt_metric_type</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 19:28:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7271905d535212108dbe38f0a0490ec3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>new_name_here</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_type_7271905d535212108dbe38f0a0490ec3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 19:28:53</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <url/>
+        <user_field/>
+        <user_field_business_rule/>
+        <x_560335_quizard_origin_exam/>
+    </asmt_metric_type>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_type_7271905d535212108dbe38f0a0490ec3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_type"><asmt_metric_type action="INSERT_OR_UPDATE"><active>true</active><allow_public>false</allow_public><allow_retake>false</allow_retake><anonymize>false</anonymize><business_rule/><chat_survey>false</chat_survey><condition table="asmt_metric_type">sys_id=7271905d535212108dbe38f0a0490ec3^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="7271905d535212108dbe38f0a0490ec3"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></condition><default_filter/><delete_business_rule/><description/><disable_ui_action/><display_all_filters>false</display_all_filters><display_field>name</display_field><duration>1970-01-15 00:00:00</duration><enable_ui_action/><end_note/><enforce_condition>false</enforce_condition><evaluation_method>quiz</evaluation_method><filter_condition/><filter_table/><introduction/><job/><live_feed>false</live_feed><name>new_name_here</name><not_show_intro_note>false</not_show_intro_note><notify_if_overdue>false</notify_if_overdue><notify_user>true</notify_user><one_click_survey>false</one_click_survey><overdue_notify_user/><portal_pagination>category</portal_pagination><publish_state>published</publish_state><roles/><sample_metric/><scale_factor>100</scale_factor><schedule_period>0</schedule_period><schedule_type>on_demand</schedule_type><scoring_type>percent</scoring_type><signature/><source_table/><survey_owners>6816f79cc0a8016401c5a33be04be441</survey_owners><sys_class_name>asmt_metric_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 19:28:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7271905d535212108dbe38f0a0490ec3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>new_name_here</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_type_7271905d535212108dbe38f0a0490ec3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 19:28:53</sys_updated_on><table>asmt_metric_type</table><url/><user_field/><user_field_business_rule/><x_560335_quizard_origin_exam/></asmt_metric_type></record_update>]]></payload>
+        <payload_hash>1085178017</payload_hash>
+        <record_name>new_name_here</record_name>
+        <reverted_from/>
+        <source>079a2930533112108dbe38f0a0490e0e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-11-08 16:09:57</sys_created_on>
+        <sys_id>297eb0fb535212108dbe38f0a0490ed4</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1930c8a18080000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Assessment Metric Type</type>
+        <update_guid>e57eb0fbac5212109a7e3604705388d4</update_guid>
+        <update_guid_history>e57eb0fbac5212109a7e3604705388d4:1085178017</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="new_name_here">ed7eb0fb535212108dbe38f0a0490ed4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 17:10:14</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_type">asmt_metric_type</sys_db_object>
+        <sys_id>6378d812f78341d0abf2de006aadc040</sys_id>
+        <sys_metadata>7271905d535212108dbe38f0a0490ec3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>new_name_here</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_type_7271905d535212108dbe38f0a0490ec3</sys_update_name>
+        <sys_update_version display_value="asmt_metric_type_7271905d535212108dbe38f0a0490ec3">297eb0fb535212108dbe38f0a0490ed4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 17:10:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
