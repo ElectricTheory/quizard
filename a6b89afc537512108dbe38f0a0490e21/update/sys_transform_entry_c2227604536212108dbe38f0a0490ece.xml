@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Quiz Generator">0bfa62c8532212108dbe38f0a0490eac</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+    var catName = source.u_category;
+    var quizId = null;
+    var catId = null;
+
+    // get property for sys_id of Metric being inserted
+    var importPropGr = new GlideRecord('sys_properties');
+
+    if (importPropGr.get('8220fe8c532212108dbe38f0a0490e2b')) {
+        quizId = importPropGr.getValue('value');
+    }
+
+    var encQ = "metric_type=" + quizId + "^name=" + catName;
+
+    var catGr = new GlideRecord('asmt_metric_category');
+    catGr.addEncodedQuery(encQ);
+    catGr.query();
+
+    //category already exists
+    if (catGr.next()) {
+
+        catId = catGr.getUniqueValue();
+
+    } else {
+
+        //need to create new category
+        var newCatGr = new GlideRecord('asmt_metric_category');
+        newCatGr.initialize();
+        newCatGr.name = catName;
+        newCatGr.metric_type = quizId;
+        newCatGr.insert();
+
+        catId = newCatGr.getUniqueValue();
+    }
+
+    var user = gs.getUserID();
+
+    var hasM2MGr = new GlideRecord('asmt_m2m_category_user');
+    hasM2MGr.addEncodedQuery('user=' + user + '^metric_category=' + catId);
+    hasM2MGr.query();
+
+    if (hasM2MGr.getRowCount() === 0) {
+        var m2mCatGr = new GlideRecord('asmt_m2m_category_user');
+        m2mCatGr.initialize();
+        m2mCatGr.metric_category = catId;
+        m2mCatGr.user = user;
+        m2mCatGr.insert();
+    }
+
+    return catId;
+
+})(source);]]></source_script>
+        <source_table>x_560335_quizard_quiz_template</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-13 20:15:22</sys_created_on>
+        <sys_id>c2227604536212108dbe38f0a0490ece</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_transform_entry_c2227604536212108dbe38f0a0490ece</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 20:46:16</sys_updated_on>
+        <target_field>category</target_field>
+        <target_table>asmt_metric</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

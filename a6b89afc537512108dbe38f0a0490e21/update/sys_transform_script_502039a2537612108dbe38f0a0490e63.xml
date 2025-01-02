@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Quiz Generator">0bfa62c8532212108dbe38f0a0490eac</map>
+        <order>200</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+    var globalHelper = new global.QuizardGlobalHelper();
+
+    /** Add tags for question meta data **/
+	var table = "asmt_metric";
+    var tags = source.u_tags;
+    var cat = source.u_category;
+    var tagsToAdd = source.u_tags.split(',');
+    tagsToAdd.push(cat);
+
+    for (var i = 0; i < tagsToAdd.length; i++) {
+
+        var existingTagId = globalHelper.getTagSysId(tagsToAdd[i]);
+
+        if (existingTagId) {
+
+            globalHelper.insertTagEntry(tagsToAdd[i], existingTagId, table, target.sys_id);
+
+        } else {
+			
+            var newTagId = globalHelper.createTag(tagsToAdd[i]);
+            globalHelper.insertTagEntry(tagsToAdd[i], newTagId, table, target.sys_id);
+
+        }
+    }
+
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-02 20:06:50</sys_created_on>
+        <sys_id>502039a2537612108dbe38f0a0490e63</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_transform_script_502039a2537612108dbe38f0a0490e63</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-02 20:50:52</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

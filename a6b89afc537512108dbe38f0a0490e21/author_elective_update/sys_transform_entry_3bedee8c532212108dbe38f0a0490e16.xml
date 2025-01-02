@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Quiz Generator">0bfa62c8532212108dbe38f0a0490eac</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+/** MOVE TO AFTER SCRIPT
+    var tagsSep = source.u_tags.split(';');
+    var hasTags = false;
+    var existingTags = {};
+    var tagIds = [];
+
+    //query for existing tags
+    var tagGr = new GlideRecord('label');
+    tagGr.addEncodedQuery('sys_class_name=label^type=qzrd');
+    tagGr.query;
+
+    while (tagGr.next()) {
+
+        hasTags = true;
+        existingTags[tagGr.getUniqueValue()] = tagGr.getValue('name');
+
+    }
+
+    for (i = 0; i < tagsSep.length; i++) {
+
+        if (hasTags) {
+
+            var tagNames = Object.values(existingTags);
+            var existingTagIds = Object.keys(existingTags);
+
+            if (tagNames.indexOf(tagsSep[i]) === -1) {
+
+                existingTags = createTag(tagsSep[i], existingTags);
+
+            } else {
+
+                var tagIdx = tagNames.indexOf(tagsSep[i]);
+                var existingId = existingTagIds[tagIdx];
+
+                tagIds.push(existingId);
+
+            }
+
+        } else {
+
+            hasTags = true;
+            var newTags = createTag(tagsSep[i], existingTags);
+            existingTags = newTags;
+
+        }
+
+    }
+
+    // insert record for new tag
+    function createTag(tagName, existingTags) {
+
+        var firstTagGr = new GlideRecord('label');
+        firstTagGr.initialize();
+
+        firstTagGr.name = tagName;
+        firstTagGr.sys_class_name = "label";
+        firstTagGr.type = "qzrd";
+        firstTagGr.background_color = "#6ab7ef";
+        firstTagGr.viewable_by = "everyone";
+        firstTagGr.insert();
+
+        var newId = firstTagGr.getUniqueValue();
+
+		
+        existingTags[newId] = tagName;
+		return existingTags;
+       // tagIds.push(firstTagGr.getUniqueValue());
+
+    }
+
+    // insert record relating tag to question
+    function createLabelEntry(label, title, questionId) {
+
+        var entryGr = new GlideRecord('label_entry');
+        entryGr.initialize();
+
+
+        entryGr.label = label; //label of tag
+        entryGr.title = title; //title of question 
+        entryGr.url = "asmt_metric.do?sys_id=" + questionId;
+        entryGr.id_type = "Assessment Metric";
+        entryGr.table = "asmt_metric";
+        entryGr.table_key = "asmt_metric"; //need to get this
+        entryGr.read = "yes";
+        entryGr.insert();
+
+    }
+**/
+})(source);]]></source_script>
+        <source_table>x_560335_quizard_quiz_template</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-13 19:57:08</sys_created_on>
+        <sys_id>3bedee8c532212108dbe38f0a0490e16</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>sys_transform_entry_3bedee8c532212108dbe38f0a0490e16</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 23:16:18</sys_updated_on>
+        <target_field>sys_tags</target_field>
+        <target_table>asmt_metric</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>sys_transform_entry_3bedee8c532212108dbe38f0a0490e16</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;&lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;&lt;choice_action&gt;create&lt;/choice_action&gt;&lt;coalesce&gt;false&lt;/coalesce&gt;&lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;&lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;&lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;&lt;map display_value="Quiz Generator"&gt;0bfa62c8532212108dbe38f0a0490eac&lt;/map&gt;&lt;reference_value_field/&gt;&lt;source_field&gt;[Script]&lt;/source_field&gt;&lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+/** MOVE TO AFTER SCRIPT
+    var tagsSep = source.u_tags.split(';');
+    var hasTags = false;
+    var existingTags = {};
+    var tagIds = [];
+
+    //query for existing tags
+    var tagGr = new GlideRecord('label');
+    tagGr.addEncodedQuery('sys_class_name=label^type=qzrd');
+    tagGr.query;
+
+    while (tagGr.next()) {
+
+        hasTags = true;
+        existingTags[tagGr.getUniqueValue()] = tagGr.getValue('name');
+
+    }
+
+    for (i = 0; i &lt; tagsSep.length; i++) {
+
+        if (hasTags) {
+
+            var tagNames = Object.values(existingTags);
+            var existingTagIds = Object.keys(existingTags);
+
+            if (tagNames.indexOf(tagsSep[i]) === -1) {
+
+                existingTags = createTag(tagsSep[i], existingTags);
+
+            } else {
+
+                var tagIdx = tagNames.indexOf(tagsSep[i]);
+                var existingId = existingTagIds[tagIdx];
+
+                tagIds.push(existingId);
+
+            }
+
+        } else {
+
+            hasTags = true;
+            var newTags = createTag(tagsSep[i], existingTags);
+            existingTags = newTags;
+
+        }
+
+    }
+
+    // insert record for new tag
+    function createTag(tagName, existingTags) {
+
+        var firstTagGr = new GlideRecord('label');
+        firstTagGr.initialize();
+
+        firstTagGr.name = tagName;
+        firstTagGr.sys_class_name = "label";
+        firstTagGr.type = "qzrd";
+        firstTagGr.background_color = "#6ab7ef";
+        firstTagGr.viewable_by = "everyone";
+        firstTagGr.insert();
+
+        var newId = firstTagGr.getUniqueValue();
+
+		
+        existingTags[newId] = tagName;
+		return existingTags;
+       // tagIds.push(firstTagGr.getUniqueValue());
+
+    }
+
+    // insert record relating tag to question
+    function createLabelEntry(label, title, questionId) {
+
+        var entryGr = new GlideRecord('label_entry');
+        entryGr.initialize();
+
+
+        entryGr.label = label; //label of tag
+        entryGr.title = title; //title of question 
+        entryGr.url = "asmt_metric.do?sys_id=" + questionId;
+        entryGr.id_type = "Assessment Metric";
+        entryGr.table = "asmt_metric";
+        entryGr.table_key = "asmt_metric"; //need to get this
+        entryGr.read = "yes";
+        entryGr.insert();
+
+    }
+**/
+})(source);]]&gt;&lt;/source_script&gt;&lt;source_table&gt;x_560335_quizard_quiz_template&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-13 19:57:08&lt;/sys_created_on&gt;&lt;sys_id&gt;3bedee8c532212108dbe38f0a0490e16&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;[Script]&lt;/sys_name&gt;&lt;sys_package display_value="Quizard" source="x_560335_quizard"&gt;a6b89afc537512108dbe38f0a0490e21&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Quizard"&gt;a6b89afc537512108dbe38f0a0490e21&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_entry_3bedee8c532212108dbe38f0a0490e16&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 23:16:18&lt;/sys_updated_on&gt;&lt;target_field&gt;sys_tags&lt;/target_field&gt;&lt;target_table&gt;asmt_metric&lt;/target_table&gt;&lt;use_source_script&gt;true&lt;/use_source_script&gt;&lt;/sys_transform_entry&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-312018348</payload_hash>
+        <record_name>[Script]</record_name>
+        <reverted_from/>
+        <source>855ae288532212108dbe38f0a0490e00</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 23:16:18</sys_created_on>
+        <sys_id>7298fe89532652108dbe38f0a0490e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193d1c217400000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 23:16:18</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>7698fe89c3265210617108f020126609</update_guid>
+        <update_guid_history>7698fe89c3265210617108f020126609:-312018348,eff02ec96fa25210cde6964ec5ba2a8b:-1888896931,27002ec95aa252103a2d0735d608aa87:-1615779390,73279a8da2625210c522b9049204b59d:-1721550614,9c4e62cce522121066b049444a29df0e:460178998</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-02 20:05:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>019952944d4242cc800c205b63bca6e4</sys_id>
+        <sys_metadata>3bedee8c532212108dbe38f0a0490e16</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_3bedee8c532212108dbe38f0a0490e16</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_3bedee8c532212108dbe38f0a0490e16">7298fe89532652108dbe38f0a0490e0a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-02 20:05:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
