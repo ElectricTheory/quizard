@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="66eaee88532212108dbe38f0a0490e6b" extends="sys_import_set_row" label="Quiz template" max_length="40" name="x_560335_quizard_quiz_template" type="collection">
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=correct" label="correct" max_length="136" name="u_correct" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=category" label="category" max_length="40" name="u_category" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=display" label="display" max_length="76" name="u_display" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=options" label="options" max_length="219" name="u_options" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=tags" label="tags" max_length="40" name="u_tags" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=correct" label="correct" max_length="1000" name="u_correct" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=category" label="category" max_length="1000" name="u_category" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=display" label="display" max_length="1000" name="u_display" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=options" label="options" max_length="1000" name="u_options" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=tags" label="tags" max_length="200" name="u_tags" type="string"/>
     </element>
 </database>

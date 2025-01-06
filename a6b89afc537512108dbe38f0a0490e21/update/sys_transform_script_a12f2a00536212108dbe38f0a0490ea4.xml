@@ -5,6 +5,10 @@
         <order>100</order>
         <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
 
+	/** Runs once at transform beginning, Creates temp id for tracking current quiz being creating**/
+
+	var tempQuizIdPropId = "8220fe8c532212108dbe38f0a0490e2b"; //x_560335_quizard.quiz_transform_temp_id
+
 	var metricGr = new GlideRecord('asmt_metric_type');
     metricGr.scale_factor = 100;
     metricGr.name = "Imported quiz";
@@ -17,7 +21,7 @@
 
     var importPropGr = new GlideRecord('sys_properties');
 
-    if (importPropGr.get('8220fe8c532212108dbe38f0a0490e2b')) {
+    if (importPropGr.get(tempQuizIdPropId)) {
 
         importPropGr.value = examId;
         importPropGr.update();
@@ -29,14 +33,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-13 20:09:20</sys_created_on>
         <sys_id>a12f2a00536212108dbe38f0a0490ea4</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>onStart</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_transform_script_a12f2a00536212108dbe38f0a0490ea4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-16 15:27:53</sys_updated_on>
+        <sys_updated_on>2025-01-06 16:40:14</sys_updated_on>
         <when>onStart</when>
     </sys_transform_script>
 </record_update>

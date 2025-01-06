@@ -10,7 +10,6 @@
     var metricId = null;
     var questionId = target.sys_id;
 
-
     // get sys_id of quiz for transform currently running
     var metricPropGr = new GlideRecord('sys_properties');
 
@@ -18,14 +17,16 @@
         metricId = metricPropGr.getValue('value');
     }
 
-    var options = source.u_options;
+    var options = source.getValue('u_options');
+
     var optionsSep = options.split(';');
-    var correctAnswers = source.u_correct;
+	
+    var correctAnswers = source.getValue('u_correct');
     var correctSep = correctAnswers.split(';');
 
     for (var i = 0; i < optionsSep.length; i++) {
 
-        var option = optionsSep[i];
+        var option = optionsSep[i].trim();
 
         var ansGr = new GlideRecord('asmt_metric_definition');
         ansGr.initialize();
@@ -34,7 +35,7 @@
         ansGr.value = i;
         ansGr.metric = questionId;
         ansGr.randomize_answers = true;
-
+		
         // mark if option is a correct answer
         if (correctSep.indexOf(option) !== -1) {
             ansGr.x_560335_quizard_is_correct = "true";
@@ -43,117 +44,20 @@
         ansGr.insert();
     }
 
-	if (!source.u_tags) {
-		return;
-	}
-
-
-    /** Generate Tags for question tags**/
-    var tagsSep = source.u_tags.split(';');
-    var hasTags = false;
-    var existingTags = {};
-    var tagIds = [];
-
-    //query for existing tags
-    var tagGr = new GlideRecord('label');
-    tagGr.addEncodedQuery('sys_class_name=label^type=qzrd');
-    tagGr.query;
-
-    while (tagGr.next()) {
-
-        hasTags = true;
-        existingTags[tagGr.getUniqueValue()] = tagGr.getValue('name');
-
-    }
-
-    for (x = 0; x < tagsSep.length; x++) {
-
-        if (hasTags) {
-
-            var tagNames = Object.values(existingTags);
-            var existingTagIds = Object.keys(existingTags);
-
-            if (tagNames.indexOf(tagsSep[x]) === -1) {
-
-                existingTags = createTag(tagsSep[x], existingTags);
-
-            } else {
-
-                var tagIdx = tagNames.indexOf(tagsSep[x]);
-                var existingId = existingTagIds[tagIdx];
-
-                tagIds.push(existingId);
-
-            }
-
-        } else {
-
-            hasTags = true;
-            var newTags = createTag(tagsSep[x], existingTags);
-            existingTags = newTags;
-
-        }
-
-    }
-
-	var idsToAdd = Object.keys(existingTags);
-	var labelsToAdd = Object.values(existingTags);
-
-	for (var idx = 0; idx < idsToAdd.length; idx++) {
-
-		createLabelEntry(idsToAdd[idx], source.u_display, questionId);
-	}
-
-    // insert record for new tag
-    function createTag(tagName, existingTags) {
-
-        var firstTagGr = new GlideRecord('label');
-        firstTagGr.initialize();
-
-        firstTagGr.name = tagName;
-        firstTagGr.sys_class_name = "label";
-        firstTagGr.type = "qzrd";
-        firstTagGr.background_color = "#6ab7ef";
-        firstTagGr.viewable_by = "everyone";
-        firstTagGr.insert();
-
-        var newId = firstTagGr.getUniqueValue();
-
-        existingTags[newId] = tagName;
-        return existingTags;
-    }
-
-    // insert record relating tag to question
-    function createLabelEntry(labelId, title, questionId) {
-
-        var entryGr = new GlideRecord('label_entry');
-        entryGr.initialize();
-
-        entryGr.label = labelId; //label ref of tag
-        entryGr.title = title; //title of question 
-        entryGr.url = "asmt_metric.do?sys_id=" + questionId + "&sysparm_view=";
-        entryGr.id_type = "Assessment Metric";
-        entryGr.table = "asmt_metric";
-        entryGr.table_key = questionId; 
-        entryGr.read = "yes";
-        entryGr.insert();
-
-    }
-
 
 })(source, map, log, target);]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-13 20:52:17</sys_created_on>
         <sys_id>8e473288536212108dbe38f0a0490e40</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_transform_script_8e473288536212108dbe38f0a0490e40</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-17 20:45:14</sys_updated_on>
+        <sys_updated_on>2025-01-06 22:07:00</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

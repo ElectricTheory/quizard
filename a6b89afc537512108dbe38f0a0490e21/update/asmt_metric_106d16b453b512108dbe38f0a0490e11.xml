@@ -62,7 +62,6 @@
         <template/>
         <value_parameters/>
         <weight>10</weight>
-        <x_560335_quizard_tags/>
     </asmt_metric>
     <sys_translated_text action="delete_multiple" query="documentkey=106d16b453b512108dbe38f0a0490e11"/>
 </record_update>
