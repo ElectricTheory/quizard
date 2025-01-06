@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=84f1aafb5376d2108dbe38f0a0490e72^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="84f1aafb5376d2108dbe38f0a0490e72"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">84f1aafb5376d2108dbe38f0a0490e72</metric_type>
+        <name>Data Strategies</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 20:56:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c1f12efb5376d2108dbe38f0a0490ebe</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Data Strategies</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_c1f12efb5376d2108dbe38f0a0490ebe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:57</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=c1f12efb5376d2108dbe38f0a0490ebe"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_c1f12efb5376d2108dbe38f0a0490ebe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=84f1aafb5376d2108dbe38f0a0490e72^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="84f1aafb5376d2108dbe38f0a0490e72"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">84f1aafb5376d2108dbe38f0a0490e72</metric_type><name>Data Strategies</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 20:56:19</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c1f12efb5376d2108dbe38f0a0490ebe</sys_id><sys_mod_count>8</sys_mod_count><sys_name>Data Strategies</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_c1f12efb5376d2108dbe38f0a0490ebe</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:13:57</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=c1f12efb5376d2108dbe38f0a0490ebe"/></record_update>]]></payload>
+        <payload_hash>1858177980</payload_hash>
+        <record_name>Data Strategies</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:57</sys_created_on>
+        <sys_id>5ab3767b53f6d2108dbe38f0a0490e39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dae8dc80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:57</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>deb3767b64f6d210e05212008b80a738</update_guid>
+        <update_guid_history>deb3767b64f6d210e05212008b80a738:1858177980,19b3f27b32f6d210b5ec83844819806b:-1569737091,09b3f27bf6f6d210eed7a2114787790e:-702684866,acb3727be3f6d210881f6a9aadf7e1e1:164367359,95f16efba776d210d97c75c59de9d729:-459752647,d9f12efb9176d210cd7ae8efbf338ff6:-1326804872,9df12efb0676d2101af2dfe06b2ae7dc:2101110199,41f12efbb776d2106355760813c1a1c3:1234057974,8df12efb0876d210e03fc1db22d73cbf:-1064746807</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Data Strategies">8bb3f67b53f6d2108dbe38f0a0490e20</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:14:00</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>3650bbb238794d8cb3e324c9a42a4581</sys_id>
+        <sys_metadata>c1f12efb5376d2108dbe38f0a0490ebe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Data Strategies</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_c1f12efb5376d2108dbe38f0a0490ebe</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_c1f12efb5376d2108dbe38f0a0490ebe">5ab3767b53f6d2108dbe38f0a0490e39</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:14:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=84f1aafb5376d2108dbe38f0a0490e72^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="84f1aafb5376d2108dbe38f0a0490e72"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">84f1aafb5376d2108dbe38f0a0490e72</metric_type>
+        <name>Security Architecture</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 20:56:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c5f12efb5376d2108dbe38f0a0490ea1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Security Architecture</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_c5f12efb5376d2108dbe38f0a0490ea1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:50</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=c5f12efb5376d2108dbe38f0a0490ea1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_c5f12efb5376d2108dbe38f0a0490ea1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=84f1aafb5376d2108dbe38f0a0490e72^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="84f1aafb5376d2108dbe38f0a0490e72"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">84f1aafb5376d2108dbe38f0a0490e72</metric_type><name>Security Architecture</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 20:56:19</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c5f12efb5376d2108dbe38f0a0490ea1</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Security Architecture</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_c5f12efb5376d2108dbe38f0a0490ea1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:13:50</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=c5f12efb5376d2108dbe38f0a0490ea1"/></record_update>]]></payload>
+        <payload_hash>-410639748</payload_hash>
+        <record_name>Security Architecture</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:50</sys_created_on>
+        <sys_id>bcb3b27b53f6d2108dbe38f0a0490e29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dae740f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:50</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>34b3b27b75f6d210ebac8986e0a57429</update_guid>
+        <update_guid_history>34b3b27b75f6d210ebac8986e0a57429:-410639748,45f12efb4876d21088268beacf9c17a6:1352328246,81f12efb2076d2102c89e6c600f8e6a3:1452304905</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Security Architecture">0fb3f67b53f6d2108dbe38f0a0490e29</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:14:00</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>015888df11c549409c07c2a6a7fbe400</sys_id>
+        <sys_metadata>c5f12efb5376d2108dbe38f0a0490ea1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Security Architecture</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_c5f12efb5376d2108dbe38f0a0490ea1</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_c5f12efb5376d2108dbe38f0a0490ea1">bcb3b27b53f6d2108dbe38f0a0490e29</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:14:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

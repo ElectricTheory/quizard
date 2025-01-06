@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>1 day</display>
+        <metric display_value="Hypercare is the period of time immediately following a system go-live. In g">10aceebb53b6d2108dbe38f0a0490eaa</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:42:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9caceebb53b6d2108dbe38f0a0490eae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1 day</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_9caceebb53b6d2108dbe38f0a0490eae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:42:57</sys_updated_on>
+        <unselected_image/>
+        <value>0</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="DELETE" query="documentkey=9caceebb53b6d2108dbe38f0a0490eae"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_definition_9caceebb53b6d2108dbe38f0a0490eae</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition"><asmt_metric_definition action="INSERT_OR_UPDATE"><display>1 day</display><metric display_value="Hypercare is the period of time immediately following a system go-live. In g">10aceebb53b6d2108dbe38f0a0490eaa</metric><normalization_input>0</normalization_input><order/><selected_image/><sys_class_name>asmt_metric_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 21:42:57</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9caceebb53b6d2108dbe38f0a0490eae</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1 day</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_definition_9caceebb53b6d2108dbe38f0a0490eae</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 21:42:57</sys_updated_on><unselected_image/><value>0</value><x_560335_quizard_is_correct>false</x_560335_quizard_is_correct></asmt_metric_definition><sys_translated_text action="delete_multiple" query="documentkey=9caceebb53b6d2108dbe38f0a0490eae"/></record_update>]]></payload>
+        <payload_hash>-536211416</payload_hash>
+        <record_name>1 day</record_name>
+        <reverted_from/>
+        <source>97b0a93b5332d2108dbe38f0a0490e9f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:42:57</sys_created_on>
+        <sys_id>18aceebb53b6d2108dbe38f0a0490eb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943d922cb10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:42:57</sys_updated_on>
+        <type>Assessment Metric Definition</type>
+        <update_guid>1caceebba5b6d210540583c48f123bb2</update_guid>
+        <update_guid_history>1caceebba5b6d210540583c48f123bb2:-536211416</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1 day">25d336bb53f6d2108dbe38f0a0490e6e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:14:27</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>bbb88c102a2b4b309dd261dcf65bce40</sys_id>
+        <sys_metadata>9caceebb53b6d2108dbe38f0a0490eae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1 day</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_9caceebb53b6d2108dbe38f0a0490eae</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_9caceebb53b6d2108dbe38f0a0490eae">18aceebb53b6d2108dbe38f0a0490eb3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:14:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

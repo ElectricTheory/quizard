@@ -5,7 +5,7 @@
         <allow_add_info>false</allow_add_info>
         <allow_not_applicable>false</allow_not_applicable>
         <auto_gen>false</auto_gen>
-        <category display_value="CMDB/CSDM">74ff1b1153ea92108dbe38f0a0490ec4</category>
+        <category/>
         <cond_question>always</cond_question>
         <condition/>
         <context/>
@@ -31,7 +31,7 @@
         <max_weight/>
         <maximum_normalization_input>false</maximum_normalization_input>
         <method>assessment</method>
-        <metric_type display_value="Imported quiz">34ff1b1153ea92108dbe38f0a0490eac</metric_type>
+        <metric_type display_value="">34ff1b1153ea92108dbe38f0a0490eac</metric_type>
         <min>0</min>
         <name>What new domain was introduced in CSDM 4.0?</name>
         <order>100</order>

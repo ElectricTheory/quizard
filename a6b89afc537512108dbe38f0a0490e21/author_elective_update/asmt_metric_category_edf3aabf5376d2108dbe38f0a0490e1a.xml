@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=7fe3e6bf5376d2108dbe38f0a0490e7b^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="7fe3e6bf5376d2108dbe38f0a0490e7b"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">7fe3e6bf5376d2108dbe38f0a0490e7b</metric_type>
+        <name>Current and To-Be Architecture</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:05:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>edf3aabf5376d2108dbe38f0a0490e1a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Current and To-Be Architecture</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_edf3aabf5376d2108dbe38f0a0490e1a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:45</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=edf3aabf5376d2108dbe38f0a0490e1a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_edf3aabf5376d2108dbe38f0a0490e1a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=7fe3e6bf5376d2108dbe38f0a0490e7b^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="7fe3e6bf5376d2108dbe38f0a0490e7b"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">7fe3e6bf5376d2108dbe38f0a0490e7b</metric_type><name>Current and To-Be Architecture</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 21:05:05</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>edf3aabf5376d2108dbe38f0a0490e1a</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Current and To-Be Architecture</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_edf3aabf5376d2108dbe38f0a0490e1a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:13:45</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=edf3aabf5376d2108dbe38f0a0490e1a"/></record_update>]]></payload>
+        <payload_hash>772630353</payload_hash>
+        <record_name>Current and To-Be Architecture</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:45</sys_created_on>
+        <sys_id>a7a3fe3b53f6d2108dbe38f0a0490e70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dae5fe30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:45</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>1fa3fe3ba0f6d210e2f10332fca02f6f</update_guid>
+        <update_guid_history>1fa3fe3ba0f6d210e2f10332fca02f6f:772630353,a6a37e3b4cf6d2108baf73a25f7476cd:1639682578,0ea33e3bd0f6d210ee8045de62e48d5f:-1788232493,e9f3aabf5376d210c76b1719b2aa7664:-560376439,a9f3aabfbf76d210fcff096777ca9c52:-1427428664,6df3aabfec76d210f845ef5632f96e1f:2000486407,a9f3aabf3876d210b7d8b305c5b5fd1c:937314266</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Current and To-Be Architecture">5cb3727b53f6d2108dbe38f0a0490e74</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:49</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>678e3e80491a4fd984c549ea9fb37d69</sys_id>
+        <sys_metadata>edf3aabf5376d2108dbe38f0a0490e1a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Current and To-Be Architecture</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_edf3aabf5376d2108dbe38f0a0490e1a</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_edf3aabf5376d2108dbe38f0a0490e1a">a7a3fe3b53f6d2108dbe38f0a0490e70</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

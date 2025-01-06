@@ -5,30 +5,40 @@
         <order>100</order>
         <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
 
-/** Runs once after all rows are inserted. Add completed transform quiz id to Quizard property and clear temp **/
+    /** Runs once after all rows are inserted. Add completed transform quiz id to Quizard property and clear temp **/
 
-var tempPropSysId = "0dbc303f537e92108dbe38f0a0490e2e"; //sys prop x_560335_quizard.quiz_transform_temp_id
-var qzrdPropSysId = "c596f4f0538212108dbe38f0a0490e11"; //sys prop x_560335_quizard.quiz_ids
+    var tempPropSysId = "8220fe8c532212108dbe38f0a0490e2b"; //sys prop x_560335_quizard.quiz_transform_temp_id
+    var qzrdPropSysId = "c596f4f0538212108dbe38f0a0490e11"; //sys prop x_560335_quizard.quiz_ids
 
-var quizId = "";
-var tempPropGr = new GlideRecord('sys_properties');
+    var quizId = "";
+    var tempPropGr = new GlideRecord('sys_properties');
 
-if (tempPropGr.get(tempPropSysId)) {
- quizId = tempPropGr.getValue('value');
- tempPropGr.value = "";
- tempPropGr.update();
-}
+    if (tempPropGr.get(tempPropSysId)) {
 
-var quizardMetricPropGr = new GlideRecord('sys_properties');
+        quizId = tempPropGr.getValue('value');
 
-if (quizardMetricPropGr.get(qzrdPropSysId)) {
-	var currentVal = quizardMetricPropGr.getValue('value');
+        tempPropGr.value = "";
+        tempPropGr.update();
+    }
 
-	if (currentVal) {
-		quizardMetricPropGr.value = currentVal + "," + quizId;
-		quizardMetricPropGr.update();
-	}
-}
+    var quizardMetricPropGr = new GlideRecord('sys_properties');
+
+    if (quizardMetricPropGr.get(qzrdPropSysId)) {
+
+        var currentVal = quizardMetricPropGr.getValue('value');
+
+        if (currentVal) {
+
+            quizardMetricPropGr.value = currentVal + "," + quizId;
+
+        } else {
+
+            quizardMetricPropGr.value = quizId;
+
+        }
+
+        quizardMetricPropGr.update();
+    }
 
 
 })(source, map, log, target);]]></script>
@@ -36,14 +46,14 @@ if (quizardMetricPropGr.get(qzrdPropSysId)) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-06 16:37:06</sys_created_on>
         <sys_id>77d4ad7f5332d2108dbe38f0a0490ebe</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>onComplete</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_transform_script_77d4ad7f5332d2108dbe38f0a0490ebe</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-06 16:40:46</sys_updated_on>
+        <sys_updated_on>2025-01-06 23:07:11</sys_updated_on>
         <when>onComplete</when>
     </sys_transform_script>
 </record_update>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=16712ebb5376d2108dbe38f0a0490e8a^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="16712ebb5376d2108dbe38f0a0490e8a"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">16712ebb5376d2108dbe38f0a0490e8a</metric_type>
+        <name>Release and Instance Strategy</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 20:54:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d881eebb5376d2108dbe38f0a0490ef9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Release and Instance Strategy</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_d881eebb5376d2108dbe38f0a0490ef9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:12:46</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=d881eebb5376d2108dbe38f0a0490ef9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_d881eebb5376d2108dbe38f0a0490ef9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=16712ebb5376d2108dbe38f0a0490e8a^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="16712ebb5376d2108dbe38f0a0490e8a"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">16712ebb5376d2108dbe38f0a0490e8a</metric_type><name>Release and Instance Strategy</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 20:54:21</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d881eebb5376d2108dbe38f0a0490ef9</sys_id><sys_mod_count>10</sys_mod_count><sys_name>Release and Instance Strategy</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_d881eebb5376d2108dbe38f0a0490ef9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:12:46</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=d881eebb5376d2108dbe38f0a0490ef9"/></record_update>]]></payload>
+        <payload_hash>1576962367</payload_hash>
+        <record_name>Release and Instance Strategy</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:12:46</sys_created_on>
+        <sys_id>4173b2f753f6d2108dbe38f0a0490e22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dad7a610000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:12:46</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>c573b2f73ff6d210d6acbd9062d0d021</update_guid>
+        <update_guid_history>c573b2f73ff6d210d6acbd9062d0d021:1576962367,187332f71bf6d2106a88633d0338b456:-1850952704,3b63feb7a6f6d21070057152523dd180:-983900479,f763feb782f6d21048e4727ab744a75e:-116848254,cb63beb72df6d210a0015bcf7c38fd4a:750203971,388122fba776d210664fcb175b2a9f62:-338191055,a08122fbb976d210541e91203613f044:-1205243280,e08122fb1f76d210babb58bc6478cc32:-2072295505,a48122fbf876d210b57b00951faf2a18:1355619566,5881eebb9e76d21078bddcadfd70fcfe:488567341,9481eebb4f76d210fb10b1d2e0cc6efb:-431667712</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Release and Instance Strategy">ad73f2f753f6d2108dbe38f0a0490e15</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:12:48</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>3af536ae99e049f49046f2d69374a409</sys_id>
+        <sys_metadata>d881eebb5376d2108dbe38f0a0490ef9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Release and Instance Strategy</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_d881eebb5376d2108dbe38f0a0490ef9</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_d881eebb5376d2108dbe38f0a0490ef9">4173b2f753f6d2108dbe38f0a0490e22</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:12:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

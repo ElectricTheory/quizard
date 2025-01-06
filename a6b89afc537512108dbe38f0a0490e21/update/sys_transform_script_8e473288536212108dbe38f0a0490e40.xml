@@ -24,9 +24,14 @@
     var correctAnswers = source.getValue('u_correct');
     var correctSep = correctAnswers.split(';');
 
+	var trimCorrect = correctSep.map(function(ans) {
+		return ans.trim();
+	});
+
     for (var i = 0; i < optionsSep.length; i++) {
 
         var option = optionsSep[i].trim();
+
 
         var ansGr = new GlideRecord('asmt_metric_definition');
         ansGr.initialize();
@@ -35,9 +40,9 @@
         ansGr.value = i;
         ansGr.metric = questionId;
         ansGr.randomize_answers = true;
-		
+
         // mark if option is a correct answer
-        if (correctSep.indexOf(option) !== -1) {
+        if (trimCorrect.indexOf(option) !== -1) {
             ansGr.x_560335_quizard_is_correct = "true";
         }
 
@@ -50,14 +55,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-13 20:52:17</sys_created_on>
         <sys_id>8e473288536212108dbe38f0a0490e40</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_transform_script_8e473288536212108dbe38f0a0490e40</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-06 22:07:00</sys_updated_on>
+        <sys_updated_on>2025-01-06 22:51:02</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

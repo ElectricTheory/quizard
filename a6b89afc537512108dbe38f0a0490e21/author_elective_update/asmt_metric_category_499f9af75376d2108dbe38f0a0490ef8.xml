@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=7c9f9af75376d2108dbe38f0a0490e36^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="7c9f9af75376d2108dbe38f0a0490e36"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">7c9f9af75376d2108dbe38f0a0490e36</metric_type>
+        <name>Testing Leading Practices</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 20:45:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>499f9af75376d2108dbe38f0a0490ef8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Testing Leading Practices</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_499f9af75376d2108dbe38f0a0490ef8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:36</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=499f9af75376d2108dbe38f0a0490ef8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_499f9af75376d2108dbe38f0a0490ef8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=7c9f9af75376d2108dbe38f0a0490e36^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="7c9f9af75376d2108dbe38f0a0490e36"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">7c9f9af75376d2108dbe38f0a0490e36</metric_type><name>Testing Leading Practices</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 20:45:56</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>499f9af75376d2108dbe38f0a0490ef8</sys_id><sys_mod_count>10</sys_mod_count><sys_name>Testing Leading Practices</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_499f9af75376d2108dbe38f0a0490ef8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:13:36</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=499f9af75376d2108dbe38f0a0490ef8"/></record_update>]]></payload>
+        <payload_hash>-1873881019</payload_hash>
+        <record_name>Testing Leading Practices</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:36</sys_created_on>
+        <sys_id>95a3fa3b53f6d2108dbe38f0a0490e16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dae3cc10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:36</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>1da3fa3b3ef6d21009374ce91a3c2815</update_guid>
+        <update_guid_history>1da3fa3b3ef6d21009374ce91a3c2815:-1873881019,4da3ba3b75f6d210d8fb4c929bf46acb:-1006828794,01a3ba3b5ff6d2101f42828bca8ad9c2:-139776569,0da3ba3b13f6d210057e62831a2e85ab:727275656,28a3ba3bdff6d210b600d072dd8b3009:1594327881,399fdaf72f76d210cc24b20d2e0db6ea:-1412670049,b99fdaf78476d2102b78924f4069bdd9:2015245022,d19fdaf78a76d2102865b9c005859609:1148192797,459fdaf7e676d210aee3d8dbe0ab4503:281140572,c59f9af70076d210cabd8f8678919cfd:-585911653,059f9af74676d2103dfde12127f221fa:796172910</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Testing Leading Practices">e1a3fa3b53f6d2108dbe38f0a0490e7c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:37</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>1fcbbe5e0e2346648aca587ab7608b01</sys_id>
+        <sys_metadata>499f9af75376d2108dbe38f0a0490ef8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Testing Leading Practices</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_499f9af75376d2108dbe38f0a0490ef8</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_499f9af75376d2108dbe38f0a0490ef8">95a3fa3b53f6d2108dbe38f0a0490e16</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

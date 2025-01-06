@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=4536ae7353b6d2108dbe38f0a0490e44^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="4536ae7353b6d2108dbe38f0a0490e44"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">4536ae7353b6d2108dbe38f0a0490e44</metric_type>
+        <name>Technical Governance</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:14:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5d36ae7353b6d2108dbe38f0a0490e68</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Technical Governance</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_5d36ae7353b6d2108dbe38f0a0490e68</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:13</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=5d36ae7353b6d2108dbe38f0a0490e68"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_5d36ae7353b6d2108dbe38f0a0490e68</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=4536ae7353b6d2108dbe38f0a0490e44^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="4536ae7353b6d2108dbe38f0a0490e44"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">4536ae7353b6d2108dbe38f0a0490e44</metric_type><name>Technical Governance</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 21:14:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5d36ae7353b6d2108dbe38f0a0490e68</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Technical Governance</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_5d36ae7353b6d2108dbe38f0a0490e68</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:13:13</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=5d36ae7353b6d2108dbe38f0a0490e68"/></record_update>]]></payload>
+        <payload_hash>-1453217053</payload_hash>
+        <record_name>Technical Governance</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:13</sys_created_on>
+        <sys_id>6383fef753f6d2108dbe38f0a0490e3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dade2a70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:13</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>e783fef794f6d2100b3b761fbf88693e</update_guid>
+        <update_guid_history>e783fef794f6d2100b3b761fbf88693e:-1453217053,b6837ef76cf6d210c4e77ff4b250088c:-586164828,02833ef70bf6d210356ef67bfe877463:280887397,d136ae7367b6d210030b1b981800f891:-442644725,9536ae73f3b6d210807d322ca1a7617f:-1309696950,5936ae730db6d2102101f18b2dce9d6d:2118218121,9536ae73ccb6d210b5c86328f98d456a:615120220</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Technical Governance">e493723b53f6d2108dbe38f0a0490e7d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:17</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>6c9100aadcc64b38a118630056275510</sys_id>
+        <sys_metadata>5d36ae7353b6d2108dbe38f0a0490e68</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Governance</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_5d36ae7353b6d2108dbe38f0a0490e68</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_5d36ae7353b6d2108dbe38f0a0490e68">6383fef753f6d2108dbe38f0a0490e3f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

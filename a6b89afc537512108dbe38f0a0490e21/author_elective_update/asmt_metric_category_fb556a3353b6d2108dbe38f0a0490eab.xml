@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=47552a3353b6d2108dbe38f0a0490eb8^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="47552a3353b6d2108dbe38f0a0490eb8"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">47552a3353b6d2108dbe38f0a0490eb8</metric_type>
+        <name>Go-Live Preparation</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:11:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fb556a3353b6d2108dbe38f0a0490eab</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Go-Live Preparation</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_fb556a3353b6d2108dbe38f0a0490eab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:25</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=fb556a3353b6d2108dbe38f0a0490eab"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_fb556a3353b6d2108dbe38f0a0490eab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=47552a3353b6d2108dbe38f0a0490eb8^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="47552a3353b6d2108dbe38f0a0490eb8"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">47552a3353b6d2108dbe38f0a0490eb8</metric_type><name>Go-Live Preparation</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 21:11:14</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fb556a3353b6d2108dbe38f0a0490eab</sys_id><sys_mod_count>10</sys_mod_count><sys_name>Go-Live Preparation</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_fb556a3353b6d2108dbe38f0a0490eab</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:13:25</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=fb556a3353b6d2108dbe38f0a0490eab"/></record_update>]]></payload>
+        <payload_hash>1832952925</payload_hash>
+        <record_name>Go-Live Preparation</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:25</sys_created_on>
+        <sys_id>a293763b53f6d2108dbe38f0a0490e62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943dae12ac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:25</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>2a93763b4cf6d2106d9206ab9478fe61</update_guid>
+        <update_guid_history>2a93763b4cf6d2106d9206ab9478fe61:1832952925,8e93363b62f6d210d6ba46bea9fd9318:-1594962146,7d93f23bd2f6d210d1402ba6a6199cf6:-727909921,3d93f23bb6f6d2106b4c48657f7b87d4:139142304,a193f23beaf6d210b27d3147894d5c7e:1006194529,8865aa3317b6d210d1b4a796ec626eb6:-1726243369,8865aa33cfb6d210a5e73e0133e0035e:1701671702,bb55aa3380b6d2107a4301c40612d906:834619477,fb556a3374b6d21062e0ba3be43ab5f4:-32432748,7b556a33b2b6d2102183bfd7dd27c2b0:-899484973,b7556a3384b6d2100af208741cb591ad:2063291046</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Go-Live Preparation">2f93f63b53f6d2108dbe38f0a0490e2e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:13:29</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>05cb7d3990ef4e3380b5cb1449a039b1</sys_id>
+        <sys_metadata>fb556a3353b6d2108dbe38f0a0490eab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Go-Live Preparation</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_fb556a3353b6d2108dbe38f0a0490eab</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_fb556a3353b6d2108dbe38f0a0490eab">a293763b53f6d2108dbe38f0a0490e62</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:13:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

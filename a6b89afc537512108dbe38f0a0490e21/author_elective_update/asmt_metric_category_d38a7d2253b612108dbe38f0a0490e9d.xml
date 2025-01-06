@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=0f8a7d2253b612108dbe38f0a0490e5f^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="0f8a7d2253b612108dbe38f0a0490e5f"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">0f8a7d2253b612108dbe38f0a0490e5f</metric_type>
+        <name>CMDB/CSDM</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-02 20:51:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d38a7d2253b612108dbe38f0a0490e9d</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>CMDB/CSDM</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_d38a7d2253b612108dbe38f0a0490e9d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:17:41</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=d38a7d2253b612108dbe38f0a0490e9d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_d38a7d2253b612108dbe38f0a0490e9d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=0f8a7d2253b612108dbe38f0a0490e5f^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="0f8a7d2253b612108dbe38f0a0490e5f"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">0f8a7d2253b612108dbe38f0a0490e5f</metric_type><name>CMDB/CSDM</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-02 20:51:45</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d38a7d2253b612108dbe38f0a0490e9d</sys_id><sys_mod_count>42</sys_mod_count><sys_name>CMDB/CSDM</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_d38a7d2253b612108dbe38f0a0490e9d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:17:41</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=d38a7d2253b612108dbe38f0a0490e9d"/></record_update>]]></payload>
+        <payload_hash>-2030196843</payload_hash>
+        <record_name>CMDB/CSDM</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:17:41</sys_created_on>
+        <sys_id>0594723f53f6d2108dbe38f0a0490e85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943db1f9350000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:17:41</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>8994723fc6f6d210bd230c55dee78984</update_guid>
+        <update_guid_history>8994723fc6f6d210bd230c55dee78984:-2030196843,0594723faef6d210af34f46f5bbf7f57:-1163144618,7494723f6bf6d2104f577c982108b036:-296092393,b494723fb0f6d2102a690ca53b2b0c15:570959832,e494323fb0f6d210f8d42a5ce8e57df4:1438012057,6094323f5ff6d210bbd6670e39dc86c7:-1989903014,a094323f51f6d21075690b201762cfa6:-1122850789,d094323f19f6d21027a4576c8cdd0285:-255798564,1494323f53f6d2105ee919af43c4f964:611253661,5494323fadf6d210749b4dfbc3b61443:1478305886,cc94323f0ff6d21057f15d7155c05f15:-2062314572,0094fefbc3f6d210978367e6c76f29f5:-1195262347,4094fefb62f6d210007d5589107bb9d4:-328210122,b384fefb57f6d2102b6b4b9a841498b3:538842103,f384fefb1af6d21024febe753d94fb92:1405894328,3784fefb60f6d2106d1efb4301d7fa71:-2022020743,a384fefbd6f6d21007f8d4c980797b12:-1154968518,e384befb86f6d210ee982f232b3980f1:-287916293,2784befbf7f6d21050bca39a78dd69d0:579135932,d784befb61f6d2103bb5e4928c154696:1446188157,d784befba2f6d210cc9f1b7d2f848e75:-953499373,7c9a3162f8b612102d0792bcc8d59e51:1769209631,b09a3162a3b61210dd946c93625d8438:902157406,209a316245b612106add1d2ca1c0cb12:-993122360,ac9afd222eb61210e96e8b6b993f2beb:-1860174585,e09afd22dcb612106fa38df8ffece7d2:1567740486,189afd22a2b61210715b6414a8ec3eb8:700688261,949afd22bfb61210cb2a4baf2fdb9192:-166363964,d89afd2250b61210fd9251e1dffc5978:-1033416189,489afd22c4b61210db87e9fe9b690152:-1900468414,8c9afd2247b61210fc5ffb54e1d90838:1527446657,c09afd2233b612101df6e29381dbc11f:660394432,409abd2285b61210ebd4bd4deec8b5f9:-206657793,738abd2245b612101debbf5c21f76fba:-1786970189,b78abd22ffb6121058ae10c0f4f80ea0:1640944882,fb8abd222ab612105902f98a76893586:773892657,6b8abd229eb61210cf809cf450da5c60:-93159568,e78abd221fb61210e04b6ee89c952d3a:-960211793,2f8abd226cb612107712911205380920:-1827264018,9b8a7d2288b61210d65302ab2be3f4fa:1600651053,df8a7d2207b612109aaf5713d6be33e0:733598828,df8a7d228ab6121069f39e5bdd53d8a1:-133453397,1f8a7d2207b61210f6f33c3e7deee69e:-857949826</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="CMDB/CSDM">4994723f53f6d2108dbe38f0a0490e91</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:17:41</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>a5f5d487ea7d4654aa2e19f45ae83924</sys_id>
+        <sys_metadata>d38a7d2253b612108dbe38f0a0490e9d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMDB/CSDM</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_d38a7d2253b612108dbe38f0a0490e9d</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_d38a7d2253b612108dbe38f0a0490e9d">0594723f53f6d2108dbe38f0a0490e85</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:17:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

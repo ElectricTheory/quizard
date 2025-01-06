@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category">
+    <asmt_metric_category action="DELETE">
+        <create_stakeholders>false</create_stakeholders>
+        <description/>
+        <details/>
+        <filter table="asmt_metric_type">sys_id=eb9caebb53b6d2108dbe38f0a0490e26^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="eb9caebb53b6d2108dbe38f0a0490e26"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <metric_type display_value="">eb9caebb53b6d2108dbe38f0a0490e26</metric_type>
+        <name>Platform Data and Integrations</name>
+        <order>1</order>
+        <qb_evaluation_method/>
+        <roles/>
+        <scoring_type>percent</scoring_type>
+        <sys_class_name>asmt_metric_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:42:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>34ac22fb53b6d2108dbe38f0a0490e8b</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Platform Data and Integrations</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_category_34ac22fb53b6d2108dbe38f0a0490e8b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:14:30</sys_updated_on>
+        <table>asmt_metric_type</table>
+        <total_metrics>0</total_metrics>
+        <weight>10</weight>
+    </asmt_metric_category>
+    <sys_translated_text action="DELETE" query="documentkey=34ac22fb53b6d2108dbe38f0a0490e8b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>b512f08a1bde0a50c82acb7b234bcb06</instance_id>
+        <instance_name>dev272638</instance_name>
+        <name>asmt_metric_category_34ac22fb53b6d2108dbe38f0a0490e8b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_category"><asmt_metric_category action="INSERT_OR_UPDATE"><create_stakeholders>false</create_stakeholders><description/><details/><filter table="asmt_metric_type">sys_id=eb9caebb53b6d2108dbe38f0a0490e26^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="eb9caebb53b6d2108dbe38f0a0490e26"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><metric_type display_value="">eb9caebb53b6d2108dbe38f0a0490e26</metric_type><name>Platform Data and Integrations</name><order>1</order><qb_evaluation_method/><roles/><scoring_type>percent</scoring_type><sys_class_name>asmt_metric_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-06 21:42:59</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>34ac22fb53b6d2108dbe38f0a0490e8b</sys_id><sys_mod_count>10</sys_mod_count><sys_name>Platform Data and Integrations</sys_name><sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package><sys_policy/><sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope><sys_update_name>asmt_metric_category_34ac22fb53b6d2108dbe38f0a0490e8b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-06 22:14:30</sys_updated_on><table>asmt_metric_type</table><total_metrics>0</total_metrics><weight>10</weight></asmt_metric_category><sys_translated_text action="delete_multiple" query="documentkey=34ac22fb53b6d2108dbe38f0a0490e8b"/></record_update>]]></payload>
+        <payload_hash>-761541168</payload_hash>
+        <record_name>Platform Data and Integrations</record_name>
+        <reverted_from/>
+        <source>8e17ae04532212108dbe38f0a0490e9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:14:30</sys_created_on>
+        <sys_id>ead3b6bb53f6d2108dbe38f0a0490e7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1943daf10e10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:14:30</sys_updated_on>
+        <type>Metric Category</type>
+        <update_guid>62d3b6bb1ef6d2107b1aea922ab2f87f</update_guid>
+        <update_guid_history>62d3b6bb1ef6d2107b1aea922ab2f87f:-761541168,9ad376bba4f6d21077ac467700aa90cd:105511057,5ad376bb83f6d210fef2f418f70e67ab:972563282,4ad376bb55f6d21048054e5bbacdcf8f:1839615507,86d376bbf0f6d210d5f9d98cb2187b63:-1588299564,c5ac22fb57b6d210c8dc22ab924c43f4:-1846075930,b8ac22fb4eb6d210db9270deb6e613da:1581839141,b8ac22fb6fb6d21023433a2ae240b4be:714786916,7cac22fbc2b6d21032268bafd2d999b3:-152265309,b0ac22fb58b6d21070bee1f1f1114090:-1019317534,fcac22fbb2b6d210cb81086e0bf3cd8c:-996224843</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Platform Data and Integrations">ebd33abb53f6d2108dbe38f0a0490ee8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 22:14:35</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_category">asmt_metric_category</sys_db_object>
+        <sys_id>7acc90f1d7b84fb3a069d6e01a07be81</sys_id>
+        <sys_metadata>34ac22fb53b6d2108dbe38f0a0490e8b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Platform Data and Integrations</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_category_34ac22fb53b6d2108dbe38f0a0490e8b</sys_update_name>
+        <sys_update_version display_value="asmt_metric_category_34ac22fb53b6d2108dbe38f0a0490e8b">ead3b6bb53f6d2108dbe38f0a0490e7f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:14:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
