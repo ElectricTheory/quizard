@@ -83,7 +83,8 @@ QuizardUtil.prototype = {
 
                 }
             },
-            answers: []
+            answers: [],
+            tags: {}
         };
 
         var categoryQuery = "metric_type=" + assessId;
@@ -118,6 +119,10 @@ QuizardUtil.prototype = {
 
             var questionId = questionGr.getUniqueValue();
             var categoryId = questionGr.getValue('category');
+            var table = questionGr.getTableName();
+
+            var questionTags = this.getTags(table, questionId, format.tags);
+            format.tags = questionTags.tagData;
 
             var question = {};
             question.name = questionGr.getDisplayValue('name');
@@ -126,6 +131,8 @@ QuizardUtil.prototype = {
             question.answers = [];
             question.type_id = questionGr.getValue('datatype');
             question.category_id = categoryId;
+            question.table = table;
+            question.tags = questionTags.recordTags;
 
             format.category.categories[catId].question_ids.push(questionId);
 
@@ -231,7 +238,7 @@ QuizardUtil.prototype = {
 
                 } else {
 
-					var nowArr = arrayUtil.convertArray(currentQuestion.answers);
+                    var nowArr = arrayUtil.convertArray(currentQuestion.answers);
 
                     correctAnswer = nowArr.find(function(answer) {
                         return answer.is_correct === "true";
@@ -239,7 +246,7 @@ QuizardUtil.prototype = {
 
                 }
 
-				var corr = correctAnswer;
+                var corr = correctAnswer;
                 var correctVal = correctAnswer.value;
                 var userResponse = submission.question_responses[questionId][0];
 
@@ -287,19 +294,102 @@ QuizardUtil.prototype = {
         return resultsObj;
     },
 
+
+    /**
+     * Get Tags related to a record.
+     * @param {str} table - table record name of sys_id.
+     * @param {str} id - sys_id of record being queried for tags.
+     * @param {obj} existingTagData - Data for tags already queried.
+     * @returns {obj} tagData {obj} - Data of tags being queried
+     * 				  recordTags {arr} - list of tags for specified record
+     */
+    getTags: function(table, id, existingTagData) {
+
+        /** 
+        		
+                if (!existingTagData) {
+
+                    tagData = {};
+
+                } else {
+
+                    tagData = existingTagData;
+
+                }
+        		**/
+
+        var tagData = existingTagData;
+
+        var existingTagKeys = Object.keys(existingTagData);
+
+        var recordTags = [];
+
+        var encQ = "table=" + table + "^table_key=" + id;
+
+        var labelGr = new GlideRecord('label_entry');
+        labelGr.addEncodedQuery(encQ);
+        labelGr.query();
+
+        while (labelGr.next()) {
+
+            var tagId = labelGr.getValue('label');
+
+
+            if (existingTagKeys.length > 0 && existingTagKeys.indexOf(tagId) !== -1) {
+
+                tagData[tagId].questions.push(id);
+                /** 
+                				gs.addInfoMessage('tagID: ' + tagId)
+                				gs.addInfoMessage('keys: ' + JSON.stringify(existingTagKeys))
+
+                                if (existingTagKeys.indexOf(tagId) !== -1) {
+                					gs.addInfoMessage('i exist')
+                                    tagData[tagId].questions.push(tagId);
+                                } else {
+
+                				}
+                **/
+            } else {
+
+                var tag = {};
+
+                tag.id = labelGr.getValue('label');
+                tag.title = labelGr.getValue('title');
+                tag.color = labelGr.getValue('color');
+
+                tag.bg_color = labelGr.getValue('background_color');
+                tag.questions = [];
+                tag.questions.push(id);
+
+                tagData[tagId] = tag;
+
+            }
+
+            recordTags.push(tagId);
+
+
+        }
+
+        return {
+            tagData: tagData,
+            recordTags: recordTags
+        };
+
+    },
+
     type: 'QuizardUtil'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-08 20:30:53</sys_created_on>
         <sys_id>543dde7453b512108dbe38f0a0490ee5</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>136</sys_mod_count>
         <sys_name>QuizardUtil</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sys_script_include_543dde7453b512108dbe38f0a0490ee5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-06 22:07:41</sys_updated_on>
+        <sys_updated_on>2025-01-08 15:13:32</sys_updated_on>
     </sys_script_include>
 </record_update>

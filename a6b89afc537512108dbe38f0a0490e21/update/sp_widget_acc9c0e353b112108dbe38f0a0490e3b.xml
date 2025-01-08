@@ -7,6 +7,8 @@
     c.quizActive = c.data.quizActive;
     c.quizData = null;
     c.canCreateNewQuiz = false;
+    c.showIncorrectOnly = false;
+    c.filterState = "";
 
     $rootScope.$on('setQuizView', function(event, obj) {
 
@@ -25,15 +27,10 @@
         if (userResponses.indexOf(ans.value) !== -1) {
 
             if (ans.is_correct === "true") {
-                console.log('correct: ' + ans.value)
                 return "user-ans-correct";
             } else {
-                console.log('incorrect: ' + ans.value)
-
                 return "user-ans-incorrect";
             }
-        } else {
-            console.log('no response... ' + ans.value)
         }
     };
 
@@ -48,6 +45,21 @@
         c.modalInstance.close();
     };
 
+    c.filterOnlyIncorrectAnswers = function() {
+
+        if (!c.filterState) {
+
+            c.filterState = "incorrect";
+
+        } else {
+
+			c.filterState = "";
+
+		}
+
+
+    };
+
     c.createNewQuizFromIncorrect = function() {
 
         c.data.action = "create_new_quiz";
@@ -58,6 +70,33 @@
             c.closeModal();
             //probably send success/error message in response.
         });
+    }
+
+    c.filterQuestionList = function(questionIds, filterState) {
+
+        if (!filterState) {
+
+            return questionIds;
+
+        } else {
+
+            var filteredIds = [];
+
+
+            if (filterState === "incorrect") {
+
+                for (var i = 0; i < questionIds.length; i++) {
+
+                    if (c.quizData.evaluation[questionIds[i]].answer_state === "incorrect") {
+                        filteredIds.push(questionIds[i]);
+                    }
+                }
+
+                return filteredIds;
+            }
+
+        }
+
     }
 
 
@@ -76,7 +115,6 @@
   width: 100%;&#13;
   justify-content: space-between;&#13;
 }&#13;
-&#13;
 &#13;
 .answers-cont {&#13;
   width: 50%;&#13;
@@ -101,11 +139,11 @@
 }&#13;
 &#13;
 .user-ans-correct {&#13;
-  border: solid green 1px;&#13;
+  border: solid green 2px;&#13;
 }&#13;
 &#13;
 .user-ans-incorrect {&#13;
-  border: solid red 1px;&#13;
+  border: solid red 2px;&#13;
 }&#13;
 &#13;
 .ans-correct-icon {&#13;
@@ -116,6 +154,22 @@
   color: $brand-danger;&#13;
 }&#13;
 &#13;
+.question {&#13;
+  margin: 15px 0;&#13;
+}&#13;
+&#13;
+.question-name, .answer-row {&#13;
+  font-size: 18px;&#13;
+}&#13;
+&#13;
+.question-tag {&#13;
+  margin: 4px;&#13;
+}&#13;
+&#13;
+.tags-row {&#13;
+  display: flex;&#13;
+  margin: 4px 0;&#13;
+}&#13;
 &#13;
 </css>
         <data_table>sp_instance</data_table>
@@ -157,62 +211,86 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-16 22:10:24</sys_created_on>
         <sys_id>acc9c0e353b112108dbe38f0a0490e3b</sys_id>
-        <sys_mod_count>165</sys_mod_count>
+        <sys_mod_count>252</sys_mod_count>
         <sys_name>Quizard Viewer</sys_name>
         <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
         <sys_policy/>
         <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
         <sys_update_name>sp_widget_acc9c0e353b112108dbe38f0a0490e3b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-05 21:50:41</sys_updated_on>
+        <sys_updated_on>2025-01-08 15:13:54</sys_updated_on>
         <template><![CDATA[<div class="qzrd-viewer qzrd-panel">
   <div ng-if="!c.quizActive">
-    <img src="x_560335_quizard.qzrd_banner.png" width="100%" height="100%"/>
+    <img src="x_560335_quizard.qzrd_banner.png" width="100%" height="100%" />
   </div>
+ 
   <div class="qzrd-viewer-quiz" ng-if="c.quizActive">
+    
     <span class="quiz-header-wrapper">
       <h1 class="quiz-name">{{ c.quizData.metric_type.dv }}</h1>
-      <p class="quiz-score">{{ c.quizData.correct_count }} / {{ c.quizData.question_count }}</p>
-      <button class="btn-rounded-rect" ng-if="c.quizData.question_count > c.quizData.correct_count" ng-click="c.openConfirmModal()">Create New Quiz</button>
+      <p class="quiz-score">
+        {{ c.quizData.correct_count }} / {{ c.quizData.question_count }}
+      </p>
+      <button
+        class="btn-rounded-rect"
+        ng-if="c.quizData.question_count > c.quizData.correct_count"
+        ng-click="c.openConfirmModal()"
+      >
+        Create New Quiz
+      </button>
+      <button
+        class="btn-rounded-rect"
+        ng-if="c.quizData.question_count > c.quizData.correct_count"
+        ng-click="c.filterOnlyIncorrectAnswers()"
+      >
+        Incorrect Only
+      </button>
     </span>
+
     <section class="quiz-answers">
-      
       <div class="category-list">
+        
         <div class="q-cat" ng-repeat="catId in c.quizData.format.category.ids">
           <p>{{ c.quizData.format.category.categories[catId].label }}</p>
-        <ol class="questions-list">
-          <li class="question" ng-repeat="questionId in c.quizData.format.category.categories[catId].question_ids">
+        
+          <ol class="questions-list">
+         
+            <li class="question" ng-repeat="questionId in c.filterQuestionList(c.quizData.format.category.categories[catId].question_ids, c.filterState)">
+              <div class="question-name">
+                {{ c.quizData.evaluation[questionId].label }}
+                <i class="fa fa-close ans-incorrect-icon" ng-if="c.quizData.evaluation[questionId].answer_state === 'incorrect'"></i>
+              </div>
 			
-            <div class="question-name">
-              {{ c.quizData.evaluation[questionId].label }}
-              <i class="fa fa-check ans-correct-icon" ng-if="c.quizData.evaluation[questionId].answer_state === 'correct'"></i>
-              <i class="fa fa-close ans-incorrect-icon" ng-if="c.quizData.evaluation[questionId].answer_state === 'incorrect'"></i>
-            </div>
+              <!-- Tags -->
+              <div class="tags-row">
+              <span class="question-tag btn-rounded-rect" ng-repeat="tag in c.quizData.format.question.questions[questionId].tags">{{c.quizData.format.tags[tag].title}}</span>
+              </div>
+              
+              <!-- Answers -->
               <div class="answers-cont">
-                <div ng-repeat="answer in c.quizData.evaluation[questionId].answers" 
-                     ng-class="styleAnswer(answer, c.quizData.evaluation[questionId].user_responses, c.quizData.evaluation[questionId].label)" 
-                     class="answer-wrapper">
-     
+            
+                <div
+                  ng-repeat="answer in c.quizData.evaluation[questionId].answers"
+                  ng-class="styleAnswer(answer, c.quizData.evaluation[questionId].user_responses, c.quizData.evaluation[questionId].label)"
+                  class="answer-wrapper"
+                >
                   <span class="answer-row">
-                    <i class="ans-icon fa fa-check ans-correct-icon" ng-if="answer.is_correct === 'true'"></i>
-                    <i class="ans-icon fa fa-close ans-incorrect-icon" ng-if="answer.is_correct === 'false'"></i>
+                    <i class="ans-icon fa fa-check ans-correct-icon"ng-if="answer.is_correct === 'true'" ></i>
+                    <i class="ans-icon fa fa-close ans-incorrect-icon" ng-if="answer.is_correct === 'false'" ></i>
                     <p class="answer-display">{{ answer.display }}</p>
                   </span>
+                  
                 </div>
-            </div>
-          </li>
-        </ol>
-     
+                
+              </div>
+             
+            </li>
+          </ol>
         </div>
       </div>
-      
-      
-
-      
-      
-      
     </section>
   </div>
-</div>]]></template>
+</div>
+]]></template>
     </sp_widget>
 </record_update>
