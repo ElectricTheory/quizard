@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Decide on the governance framework to flex to meet the changing needs of the organization.</display>
+        <metric display_value="What are the responsibilities of the Now Platform Owner? Select all that apply.">429ee2bf53b6d2108dbe38f0a0490e18</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>929ee2bf53b6d2108dbe38f0a0490e29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Decide on the governance framework to flex to meet the changing needs of the organization.</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_929ee2bf53b6d2108dbe38f0a0490e29</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:33</sys_updated_on>
+        <unselected_image/>
+        <value>4</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="DELETE" query="documentkey=929ee2bf53b6d2108dbe38f0a0490e29"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>a28b9cd71bd946d439a54089bd4bcb30</instance_id>
+        <instance_name>dev256741</instance_name>
+        <name>asmt_metric_definition_929ee2bf53b6d2108dbe38f0a0490e29</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>Decide on the governance framework to flex to meet the changing needs of the organization.</display>
+        <metric display_value="What are the responsibilities of the Now Platform Owner? Select all that apply.">429ee2bf53b6d2108dbe38f0a0490e18</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>929ee2bf53b6d2108dbe38f0a0490e29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Decide on the governance framework to flex to meet the changing needs of the organization.</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_929ee2bf53b6d2108dbe38f0a0490e29</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:33</sys_updated_on>
+        <unselected_image/>
+        <value>4</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=929ee2bf53b6d2108dbe38f0a0490e29"/>
+</record_update>]]></payload>
+        <payload_hash>-444528534</payload_hash>
+        <record_name>Decide on the governance framework to flex to meet the changing needs of the organization.</record_name>
+        <reverted_from/>
+        <source>b9c18f47c3471210c86b991ed401312a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:35:53</sys_created_on>
+        <sys_id>46d10787c3471210c86b991ed40131f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19471e708800000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:35:53</sys_updated_on>
+        <type>Assessment Metric Definition</type>
+        <update_guid>06d10787934712108765aee8399403f0</update_guid>
+        <update_guid_history>06d10787934712108765aee8399403f0:-444528534</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Decide on the governance framework to flex to meet the changing needs of the org">6973c38fc3471210c86b991ed40131d4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:42:57</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>7dc2962ba2e04c2c8ba51e702dbd0e90</sys_id>
+        <sys_metadata>929ee2bf53b6d2108dbe38f0a0490e29</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Decide on the governance framework to flex to meet the changing needs of the organization.</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_929ee2bf53b6d2108dbe38f0a0490e29</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_929ee2bf53b6d2108dbe38f0a0490e29">46d10787c3471210c86b991ed40131f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:42:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

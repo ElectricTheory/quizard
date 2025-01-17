@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>3-stack</display>
+        <metric display_value="Staging for troubleshooting is a benefit for which type of environment stack?">40ae66bf53b6d2108dbe38f0a0490eee</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c4aea6bf53b6d2108dbe38f0a0490e04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3-stack</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_c4aea6bf53b6d2108dbe38f0a0490e04</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:40</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="DELETE" query="documentkey=c4aea6bf53b6d2108dbe38f0a0490e04"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>a28b9cd71bd946d439a54089bd4bcb30</instance_id>
+        <instance_name>dev256741</instance_name>
+        <name>asmt_metric_definition_c4aea6bf53b6d2108dbe38f0a0490e04</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>3-stack</display>
+        <metric display_value="Staging for troubleshooting is a benefit for which type of environment stack?">40ae66bf53b6d2108dbe38f0a0490eee</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c4aea6bf53b6d2108dbe38f0a0490e04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3-stack</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_c4aea6bf53b6d2108dbe38f0a0490e04</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:40</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=c4aea6bf53b6d2108dbe38f0a0490e04"/>
+</record_update>]]></payload>
+        <payload_hash>1100527718</payload_hash>
+        <record_name>3-stack</record_name>
+        <reverted_from/>
+        <source>b9c18f47c3471210c86b991ed401312a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:35:55</sys_created_on>
+        <sys_id>6ed14787c3471210c86b991ed401317f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19471e70d850000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:35:55</sys_updated_on>
+        <type>Assessment Metric Definition</type>
+        <update_guid>2ed14787bf47121072c9ca9cbf33987f</update_guid>
+        <update_guid_history>2ed14787bf47121072c9ca9cbf33987f:1100527718</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="3-stack">9573c38fc3471210c86b991ed40131aa</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:42:56</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>09866a6e43eb4c74a7efb47487afc190</sys_id>
+        <sys_metadata>c4aea6bf53b6d2108dbe38f0a0490e04</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3-stack</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_c4aea6bf53b6d2108dbe38f0a0490e04</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_c4aea6bf53b6d2108dbe38f0a0490e04">6ed14787c3471210c86b991ed401317f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:42:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Key contacts and decision-makers</display>
+        <metric display_value="Suzi works with all of her customers to establish go-live plan. What are the outcomes of the plan? Select all that apply.">669ee2bf53b6d2108dbe38f0a0490ec9</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>269ee2bf53b6d2108dbe38f0a0490ed3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Key contacts and decision-makers</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_269ee2bf53b6d2108dbe38f0a0490ed3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:34:58</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>true</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="DELETE" query="documentkey=269ee2bf53b6d2108dbe38f0a0490ed3"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>a28b9cd71bd946d439a54089bd4bcb30</instance_id>
+        <instance_name>dev256741</instance_name>
+        <name>asmt_metric_definition_269ee2bf53b6d2108dbe38f0a0490ed3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>Key contacts and decision-makers</display>
+        <metric display_value="Suzi works with all of her customers to establish go-live plan. What are the outcomes of the plan? Select all that apply.">669ee2bf53b6d2108dbe38f0a0490ec9</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>269ee2bf53b6d2108dbe38f0a0490ed3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Key contacts and decision-makers</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_269ee2bf53b6d2108dbe38f0a0490ed3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 22:34:58</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>true</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=269ee2bf53b6d2108dbe38f0a0490ed3"/>
+</record_update>]]></payload>
+        <payload_hash>-1204821162</payload_hash>
+        <record_name>Key contacts and decision-makers</record_name>
+        <reverted_from/>
+        <source>b9c18f47c3471210c86b991ed401312a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:35:50</sys_created_on>
+        <sys_id>e1d1c387c3471210c86b991ed4013139</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19471e6fca50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:35:50</sys_updated_on>
+        <type>Assessment Metric Definition</type>
+        <update_guid>a1d1c38762471210748def1e1e745239</update_guid>
+        <update_guid_history>a1d1c38762471210748def1e1e745239:-1204821162</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Key contacts and decision-makers">7973078fc3471210c86b991ed401314b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:42:58</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>90723403e78948b494cbea081c2b10e1</sys_id>
+        <sys_metadata>269ee2bf53b6d2108dbe38f0a0490ed3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Key contacts and decision-makers</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_269ee2bf53b6d2108dbe38f0a0490ed3</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_269ee2bf53b6d2108dbe38f0a0490ed3">e1d1c387c3471210c86b991ed4013139</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:42:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Identify hot spots</display>
+        <metric display_value="Select the steps to consider if the customers implementation is a ServiceNow architecture.">5b9e66bf53b6d2108dbe38f0a0490e0a</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1b9e66bf53b6d2108dbe38f0a0490e14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Identify hot spots</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_1b9e66bf53b6d2108dbe38f0a0490e14</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:38</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>true</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="DELETE" query="documentkey=1b9e66bf53b6d2108dbe38f0a0490e14"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>a28b9cd71bd946d439a54089bd4bcb30</instance_id>
+        <instance_name>dev256741</instance_name>
+        <name>asmt_metric_definition_1b9e66bf53b6d2108dbe38f0a0490e14</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>Identify hot spots</display>
+        <metric display_value="Select the steps to consider if the customers implementation is a ServiceNow architecture.">5b9e66bf53b6d2108dbe38f0a0490e0a</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1b9e66bf53b6d2108dbe38f0a0490e14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Identify hot spots</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_1b9e66bf53b6d2108dbe38f0a0490e14</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:38</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>true</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=1b9e66bf53b6d2108dbe38f0a0490e14"/>
+</record_update>]]></payload>
+        <payload_hash>-1480674302</payload_hash>
+        <record_name>Identify hot spots</record_name>
+        <reverted_from/>
+        <source>b9c18f47c3471210c86b991ed401312a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:35:50</sys_created_on>
+        <sys_id>15d1c387c3471210c86b991ed4013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19471e6fbe70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:35:50</sys_updated_on>
+        <type>Assessment Metric Definition</type>
+        <update_guid>d1d1c387284712108f6245c17cc53a28</update_guid>
+        <update_guid_history>d1d1c387284712108f6245c17cc53a28:-1480674302</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Identify hot spots">fd73078fc3471210c86b991ed4013126</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:42:58</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>478797ad117d4623b015c92cefb26e81</sys_id>
+        <sys_metadata>1b9e66bf53b6d2108dbe38f0a0490e14</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Identify hot spots</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_1b9e66bf53b6d2108dbe38f0a0490e14</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_1b9e66bf53b6d2108dbe38f0a0490e14">15d1c387c3471210c86b991ed4013128</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:42:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

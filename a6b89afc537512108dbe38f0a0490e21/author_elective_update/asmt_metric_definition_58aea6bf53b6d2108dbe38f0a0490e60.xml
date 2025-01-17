@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="DELETE">
+        <display>Manual Testing</display>
+        <metric display_value="Which types of testing best describes a workable option when test cases are run repeatedly over a long period of time?">98aea6bf53b6d2108dbe38f0a0490e56</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>58aea6bf53b6d2108dbe38f0a0490e60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manual Testing</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_58aea6bf53b6d2108dbe38f0a0490e60</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:41</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="DELETE" query="documentkey=58aea6bf53b6d2108dbe38f0a0490e60"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</application>
+        <file_path/>
+        <instance_id>a28b9cd71bd946d439a54089bd4bcb30</instance_id>
+        <instance_name>dev256741</instance_name>
+        <name>asmt_metric_definition_58aea6bf53b6d2108dbe38f0a0490e60</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>Manual Testing</display>
+        <metric display_value="Which types of testing best describes a workable option when test cases are run repeatedly over a long period of time?">98aea6bf53b6d2108dbe38f0a0490e56</metric>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-06 21:51:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>58aea6bf53b6d2108dbe38f0a0490e60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manual Testing</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_update_name>asmt_metric_definition_58aea6bf53b6d2108dbe38f0a0490e60</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 21:51:41</sys_updated_on>
+        <unselected_image/>
+        <value>1</value>
+        <x_560335_quizard_is_correct>false</x_560335_quizard_is_correct>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=58aea6bf53b6d2108dbe38f0a0490e60"/>
+</record_update>]]></payload>
+        <payload_hash>-692313902</payload_hash>
+        <record_name>Manual Testing</record_name>
+        <reverted_from/>
+        <source>b9c18f47c3471210c86b991ed401312a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:35:52</sys_created_on>
+        <sys_id>39d10787c3471210c86b991ed401313d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19471e703400000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:35:52</sys_updated_on>
+        <type>Assessment Metric Definition</type>
+        <update_guid>f5d10787a3471210d5081873a1760c3d</update_guid>
+        <update_guid_history>f5d10787a3471210d5081873a1760c3d:-692313902</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Manual Testing">6673478fc3471210c86b991ed401313e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 01:43:01</sys_created_on>
+        <sys_db_object display_value="" name="asmt_metric_definition">asmt_metric_definition</sys_db_object>
+        <sys_id>1ee9c5a4a8504bc09627beb27af9f640</sys_id>
+        <sys_metadata>58aea6bf53b6d2108dbe38f0a0490e60</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manual Testing</sys_name>
+        <sys_package display_value="Quizard" source="x_560335_quizard">a6b89afc537512108dbe38f0a0490e21</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Quizard">a6b89afc537512108dbe38f0a0490e21</sys_scope>
+        <sys_scope_delete display_value="">2defbb397ae84e548cf67a6c7cb06ee4</sys_scope_delete>
+        <sys_update_name>asmt_metric_definition_58aea6bf53b6d2108dbe38f0a0490e60</sys_update_name>
+        <sys_update_version display_value="asmt_metric_definition_58aea6bf53b6d2108dbe38f0a0490e60">39d10787c3471210c86b991ed401313d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 01:43:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
